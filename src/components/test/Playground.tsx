@@ -40,7 +40,7 @@ function Playground() {
             <ButtonRegular text={"PROMIJENI"} variant={"filled"} color={"blue"} icon={<Edit/>}/>
 
 
-            <Grid container spacing={2} style={{padding: "1rem", background: "red", marginBottom: "2rem"}} justifyContent={"space-around"}>
+            <Grid container spacing={2} style={{padding: "1rem", marginBottom: "2rem"}} justifyContent={"space-around"}>
                 <Grid item xl={4} lg={4} md={6} sm={6} xs={12}>
                     <ReviewCard
                         title={"VW GOLF 7 HIGHLINE"}
@@ -67,7 +67,7 @@ function Playground() {
                 </Grid>
             </Grid>
 
-            <Grid container spacing={2} style={{padding: "1rem", background: "red", marginBottom: "2rem"}}>
+            <Grid container spacing={2} style={{padding: "1rem", marginBottom: "2rem"}}>
                 <Grid item xl={3}>
                     <AdCard
                         carID={1}
