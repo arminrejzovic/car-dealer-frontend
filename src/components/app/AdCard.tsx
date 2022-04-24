@@ -21,17 +21,17 @@ function AdCard(props: AdCardProps) {
                 <img src={props.thumbnailURL} style={{aspectRatio:"16/9"}}/>
                 <div style={{padding: "1rem"}}>
                     <h3>{props.adTitle}</h3>
-                    <Grid container spacing={2} style={{textAlign: "center", textDecoration: "none", fontWeight: "normal"}}>
-                        <Grid item xl={6}>
+                    <Grid container spacing={1} style={{textAlign: "center", textDecoration: "none", fontWeight: "normal"}}>
+                        <Grid item xl={6} lg={6} md={6} sm={6} xs={6}>
                             <h5>{props.yearBuilt}. godište</h5>
                         </Grid>
-                        <Grid item xl={6}>
+                        <Grid item xl={6} lg={6} md={6} sm={6} xs={6}>
                             <h5>{props.transmission}</h5>
                         </Grid>
-                        <Grid item xl={6}>
+                        <Grid item xl={6} lg={6} md={6} sm={6} xs={6}>
                             <h5>{props.mileage} km</h5>
                         </Grid>
-                        <Grid item xl={6}>
+                        <Grid item xl={6} lg={6} md={6} sm={6} xs={6}>
                             <h5>{props.horsepower} KS</h5>
                         </Grid>
                     </Grid>

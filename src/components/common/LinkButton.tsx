@@ -6,10 +6,10 @@ interface LinkButtonProps extends ButtonProps{
     linkTo: string;
 }
 
-function LinkButton(props: any) {
+function LinkButton(props: LinkButtonProps) {
     return (
         <Link to={props.linkTo}>
-            <ButtonRegular text={props.text} variant={props.variant} color={props.color}/>
+            <ButtonRegular text={props.text} variant={props.variant} color={props.color} icon={props.icon}/>
         </Link>
     );
 }

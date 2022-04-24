@@ -1,5 +1,5 @@
 .adCard:hover,
 .adCard:focus {
     transform: scale(1.02);
-    transition: all 300ms ease-in-out;
+    transition: all 100ms ease-in-out;
 }
