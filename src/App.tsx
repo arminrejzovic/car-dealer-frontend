@@ -1,17 +1,20 @@
 import React from 'react';
 import './App.css';
-import {HashRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
 
 import Playground from "./routes/test/Playground";
+import LandingPage from "./routes/LandingPage";
+import {Container} from "@mui/material";
 
 function App() {
   return (
     <div className="App">
-        <HashRouter>
+        <BrowserRouter>
             <Routes>
+                <Route path={"/"} element={<LandingPage/>}/>
                 <Route path={"/playground"} element={<Playground/>}/>
             </Routes>
-        </HashRouter>
+        </BrowserRouter>
     </div>
   );
 }

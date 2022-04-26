@@ -7,6 +7,7 @@ import {Grid} from "@mui/material";
 import AdCard from "../../components/app/AdCard";
 import AdBrief from "../../components/admin-panel/AdBrief";
 import OfferBrief from "../../components/admin-panel/OfferBrief";
+import Gallery from "../../components/common/Gallery";
 
 function Playground() {
     return (
@@ -208,6 +209,11 @@ function Playground() {
                         username={"veldin_s"}
                         offer={28000}
                     />
+                </Grid>
+            </Grid>
+            <Grid container spacing={2}>
+                <Grid item xl={5}>
+                    <Gallery/>
                 </Grid>
             </Grid>
 

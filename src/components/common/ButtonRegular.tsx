@@ -17,10 +17,10 @@ function ButtonRegular(props: ButtonProps) {
                 boxShadow: `inset 0px 0px 0px 4px var(--light-${props.color})`,
                 color: `var(--light-${props.color})`,
                 fontWeight: "600",
-                paddingLeft: paddingLeft
+                paddingLeft: paddingLeft,
             } : {
                 backgroundColor: `var(--light-${props.color})`,
-                paddingLeft: paddingLeft
+                paddingLeft: paddingLeft,
             }}
         >
             {props.icon}
