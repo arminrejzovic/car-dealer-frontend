@@ -76,12 +76,12 @@ function LandingPage() {
                 <section style={{marginTop: "2rem"}}>
                     <h1 style={{fontSize: "2.375rem"}}>PRODAJA AUTOMOBILA</h1>
                     <Grid container spacing={2}>
-                        <Grid item xl={6}>
+                        <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
                             <SalesForm/>
                         </Grid>
 
-                        <Grid item xl={6}>
-                            <img src={scirocco}/>
+                        <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
+                            <img className={Styles.sectionImage} src={scirocco}/>
                         </Grid>
                     </Grid>
                 </section>
@@ -90,7 +90,7 @@ function LandingPage() {
                     <h1 style={{fontSize: "2.375rem"}}>IZNAJMLJIVANJE AUTOMOBILA</h1>
                     <Grid container spacing={2}>
                         <Grid item xl={6}>
-                            <img src={touran}/>
+                            <img className={Styles.sectionImage} src={touran}/>
                         </Grid>
 
                         <Grid item xl={6}>

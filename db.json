@@ -1,0 +1,933 @@
+{
+    "car_types": [
+        {
+            "id": 1,
+            "type": "Limuzina"
+        },
+        {
+            "id": 2,
+            "type": "Malo auto"
+        },
+        {
+            "id": 3,
+            "type": "Karavan"
+        },
+        {
+            "id": 4,
+            "type": "Monovolumen"
+        },
+        {
+            "id": 5,
+            "type": "Kombi"
+        },
+        {
+            "id": 6,
+            "type": "Terenac"
+        },
+        {
+            "id": 7,
+            "type": "SUV"
+        },
+        {
+            "id": 8,
+            "type": "Kabriolet"
+        },
+        {
+            "id": 9,
+            "type": "Sportski/kupe"
+        },
+        {
+            "id": 10,
+            "type": "Off-road"
+        },
+        {
+            "id": 11,
+            "type": "Caddy"
+        },
+        {
+            "id": 12,
+            "type": "Pick-up"
+        },
+        {
+            "id": 13,
+            "type": "Oldtimer"
+        },
+        {
+            "id": 14,
+            "type": "Ostali"
+        }
+
+    ],
+
+    "countries": [
+        {
+            "id": 1,
+            "name": "Njemačka"
+        },
+        {
+            "id": 2,
+            "name": "Francuska"
+        },
+        {
+            "id": 3,
+            "name": "Italija"
+        },
+        {
+            "id": 4,
+            "name": "Južna Koreja"
+        },
+        {
+            "id": 5,
+            "name": "Japan"
+        },
+        {
+            "id": 6,
+            "name": "Španija"
+        },
+        {
+            "id": 7,
+            "name": "Češka Republika"
+        },
+        {
+            "id": 8,
+            "name": "SAD"
+        },
+        {
+            "id": 9,
+            "name": "Švedska"
+        },{
+            "id": 10,
+            "name": "Velika Britanija"
+        },
+        {
+            "id": 11,
+            "name": "Rusija"
+        },
+        {
+            "id": 12,
+            "name": "Srbija"
+        },
+        {
+            "id": 13,
+            "name": "Kina"
+        },
+        {
+            "id": 14,
+            "name": "Ostali"
+        }
+    ],
+
+    "drive_types": [
+        {
+            "id": 1,
+            "type": "Prednji"
+        },
+        {
+            "id": 2,
+            "type": "Zadnji"
+        },
+        {
+            "id": 3,
+            "type": "Sva četiri"
+        }
+    ],
+
+    "fuel_types": [
+        {
+            "id": 1,
+            "type": "Benzin"
+        },
+        {
+            "id": 2,
+            "type": "Dizel"
+        },
+        {
+            "id": 3,
+            "type": "Plin"
+        },
+        {
+            "id": 4,
+            "type": "Hibrid"
+        },
+        {
+            "id": 5,
+            "type": "Električni"
+        }
+    ],
+
+    "manufacturers": [
+        {
+            "id": 1,
+            "name": "Audi",
+            "countryId": 1
+        },
+        {
+            "id": 2,
+            "name": "BMW",
+            "countryId": 1
+        },
+        {
+            "id": 3,
+            "name": "Mercedes Benz",
+            "countryId": 1
+        },
+        {
+            "id": 4,
+            "name": "Volkswagen",
+            "countryId": 1
+        },
+        {
+            "id": 5,
+            "name": "Opel",
+            "countryId": 1
+        },
+        {
+            "id": 6,
+            "name": "Citroen",
+            "countryId": 2
+        },
+        {
+            "id": 7,
+            "name": "Peugeot",
+            "countryId": 2
+        },
+        {
+            "id": 8,
+            "name": "Renault",
+            "countryId": 2
+        },
+        {
+            "id": 9,
+            "name": "Alfa Romeo",
+            "countryId": 3
+        },
+        {
+            "id": 10,
+            "name": "Fiat",
+            "countryId": 3
+        },
+        {
+            "id": 11,
+            "name": "Hyundai",
+            "countryId": 4
+        },
+        {
+            "id": 12,
+            "name": "Kia",
+            "countryId": 4
+        },
+        {
+            "id": 13,
+            "name": "Ssangyong",
+            "countryId": 4
+        },
+        {
+            "id": 14,
+            "name": "Mazda",
+            "countryId": 5
+        },
+        {
+            "id": 15,
+            "name": "Mitsubishi",
+            "countryId": 5
+        },
+        {
+            "id": 16,
+            "name": "Toyota",
+            "countryId": 5
+        },
+        {
+            "id": 17,
+            "name": "Suzuki",
+            "countryId": 5
+        },
+        {
+            "id": 18,
+            "name": "Seat",
+            "countryId": 6
+        },
+        {
+            "id": 19,
+            "name": "Cupra",
+            "countryId": 6
+        },
+        {
+            "id": 20,
+            "name": "Škoda",
+            "countryId": 7
+        },
+        {
+            "id": 21,
+            "name": "Chevrolet",
+            "countryId": 8
+        },
+        {
+            "id": 22,
+            "name": "Dodge",
+            "countryId": 8
+        },
+        {
+            "id": 23,
+            "name": "Chrysler",
+            "countryId": 8
+        },
+        {
+            "id": 24,
+            "name": "Jeep",
+            "countryId": 8
+        },
+        {
+            "id": 25,
+            "name": "Ford",
+            "countryId": 8
+        },
+        {
+            "id": 26,
+            "name": "Land Rover",
+            "countryId": 10
+        },
+        {
+            "id": 27,
+            "name": "Jaguar",
+            "countryId": 10
+        },
+        {
+            "id": 28,
+            "name": "Lada",
+            "countryId": 11
+        },
+        {
+            "id": 29,
+            "name": "Zastava",
+            "countryId": 12
+        },
+        {
+            "id": 30,
+            "name": "Porsche",
+            "countryId": 1
+        },
+        {
+            "id": 31,
+            "name": "Cadillac",
+            "countryId": 8
+        }
+    ],
+
+    "models": [
+        {
+            "id": 1,
+            "name": "A1",
+            "manufacturerId": 1
+        },
+        {
+            "id": 2,
+            "name": "A2",
+            "manufacturerId": 1
+        },
+        {
+            "id": 3,
+            "name": "A3",
+            "manufacturerId": 1
+        },
+        {
+            "id": 4,
+            "name": "A4",
+            "manufacturerId": 1
+        },
+        {
+            "id": 5,
+            "name": "A5",
+            "manufacturerId": 1
+        },
+        {
+            "id": 6,
+            "name": "A6",
+            "manufacturerId": 1
+        },
+        {
+            "id": 7,
+            "name": "A7",
+            "manufacturerId": 1
+        },
+        {
+            "id": 8,
+            "name": "A8",
+            "manufacturerId": 1
+        },
+        {
+            "id": 9,
+            "name": "Q2",
+            "manufacturerId": 1
+        },
+        {
+            "id": 10,
+            "name": "Q3",
+            "manufacturerId": 1
+        },
+        {
+            "id": 11,
+            "name": "Q3 Sportback",
+            "manufacturerId": 1
+        },
+        {
+            "id": 12,
+            "name": "Q5",
+            "manufacturerId": 1
+        },
+        {
+            "id": 13,
+            "name": "Q5 Sportback",
+            "manufacturerId": 1
+        },
+        {
+            "id": 14,
+            "name": "Q7",
+            "manufacturerId": 1
+        },
+        {
+            "id": 15,
+            "name": "Q8",
+            "manufacturerId": 1
+        },
+        {
+            "id": 16,
+            "name": "e-tron GT",
+            "manufacturerId": 1
+        },
+        {
+            "id": 17,
+            "name": "Serije 1",
+            "manufacturerId": 2
+        },
+        {
+            "id": 17,
+            "name": "Serije 2",
+            "manufacturerId": 2
+        },
+        {
+            "id": 18,
+            "name": "Serije 3",
+            "manufacturerId": 2
+        },
+        {
+            "id": 19,
+            "name": "Serije 4",
+            "manufacturerId": 2
+        },
+        {
+            "id": 20,
+            "name": "Serije 5",
+            "manufacturerId": 2
+        },
+        {
+            "id": 21,
+            "name": "Serije 6",
+            "manufacturerId": 2
+        },
+        {
+            "id": 22,
+            "name": "Serije 7",
+            "manufacturerId": 2
+        },
+        {
+            "id": 23,
+            "name": "Serije 8",
+            "manufacturerId": 2
+        },
+        {
+            "id": 24,
+            "name": "X1",
+            "manufacturerId": 2
+        },
+        {
+            "id": 25,
+            "name": "X3",
+            "manufacturerId": 2
+        },
+        {
+            "id": 26,
+            "name": "X4",
+            "manufacturerId": 2
+        },
+        {
+            "id": 27,
+            "name": "X5",
+            "manufacturerId": 2
+        },
+        {
+            "id": 28,
+            "name": "X6",
+            "manufacturerId": 2
+        },
+        {
+            "id": 29,
+            "name": "X7",
+            "manufacturerId": 2
+        },
+        {
+            "id": 30,
+            "name": "M3",
+            "manufacturerId": 2
+        },
+        {
+            "id": 31,
+            "name": "M5",
+            "manufacturerId": 2
+        },
+        {
+            "id": 32,
+            "name": "Z4",
+            "manufacturerId": 2
+        },
+        {
+            "id": 33,
+            "name": "X6M",
+            "manufacturerId": 2
+        },
+        {
+            "id": 34,
+            "name": "C Klasa",
+            "manufacturerId": 3
+        },
+        {
+            "id": 35,
+            "name": "E Klasa",
+            "manufacturerId": 3
+        },
+        {
+            "id": 36,
+            "name": "S Klasa",
+            "manufacturerId": 3
+        },
+        {
+            "id": 37,
+            "name": "A Klasa",
+            "manufacturerId": 3
+        },
+        {
+            "id": 38,
+            "name": "CLA",
+            "manufacturerId": 3
+        },
+        {
+            "id": 39,
+            "name": "CLS",
+            "manufacturerId": 3
+        },
+        {
+            "id": 40,
+            "name": "CLA Shooting Break",
+            "manufacturerId": 3
+        },
+        {
+            "id": 41,
+            "name": "CLS Shooting Break",
+            "manufacturerId": 3
+        },
+        {
+            "id": 42,
+            "name": "GLC",
+            "manufacturerId": 3
+        },
+        {
+            "id": 43,
+            "name": "SLK",
+            "manufacturerId": 3
+        },
+        {
+            "id": 44,
+            "name": "ML",
+            "manufacturerId": 3
+        },
+        {
+            "id": 45,
+            "name": "GLE",
+            "manufacturerId": 3
+        },
+        {
+            "id": 46,
+            "name": "Polo",
+            "manufacturerId": 4
+        },
+        {
+            "id": 47,
+            "name": "Golf",
+            "manufacturerId": 4
+        },
+        {
+            "id": 48,
+            "name": "Scirocco",
+            "manufacturerId": 4
+        },
+        {
+            "id": 49,
+            "name": "Passat",
+            "manufacturerId": 4
+        },
+        {
+            "id": 50,
+            "name": "Passat CC",
+            "manufacturerId": 4
+        },
+        {
+            "id": 51,
+            "name": "Arteon",
+            "manufacturerId": 4
+        },
+        {
+            "id": 52,
+            "name": "Tiguan",
+            "manufacturerId": 4
+        },
+        {
+            "id": 53,
+            "name": "Touareg",
+            "manufacturerId": 4
+        },
+        {
+            "id": 54,
+            "name": "T Cross",
+            "manufacturerId": 4
+        },
+        {
+            "id": 55,
+            "name": "T Rok",
+            "manufacturerId": 4
+        },
+        {
+            "id": 56,
+            "name": "Touran",
+            "manufacturerId": 4
+        },
+        {
+            "id": 57,
+            "name": "Sharan",
+            "manufacturerId": 4
+        },
+        {
+            "id": 58,
+            "name": "Beetle",
+            "manufacturerId": 4
+        },
+        {
+            "id": 59,
+            "name": "Phaeton",
+            "manufacturerId": 4
+        },
+        {
+            "id": 60,
+            "name": "Eos",
+            "manufacturerId": 4
+        },
+        {
+            "id": 61,
+            "name": "Adam",
+            "manufacturerId": 5
+        },
+        {
+            "id": 62,
+            "name": "Corsa",
+            "manufacturerId": 5
+        },
+        {
+            "id": 63,
+            "name": "Astra",
+            "manufacturerId": 5
+        },
+        {
+            "id": 64,
+            "name": "Insignia",
+            "manufacturerId": 5
+        },
+        {
+            "id": 65,
+            "name": "Meriva",
+            "manufacturerId": 5
+        },
+        {
+            "id": 66,
+            "name": "Crossland X",
+            "manufacturerId": 5
+        },
+        {
+            "id": 67,
+            "name": "Zafira",
+            "manufacturerId": 5
+        },
+        {
+            "id": 68,
+            "name": "Tigra",
+            "manufacturerId": 5
+        },
+        {
+            "id": 69,
+            "name": "Grandland X",
+            "manufacturerId": 5
+        },
+        {
+            "id": 70,
+            "name": "Vectra",
+            "manufacturerId": 5
+        },
+        {
+            "id": 71,
+            "name": "C1",
+            "manufacturerId": 6
+        },
+        {
+            "id": 72,
+            "name": "C2",
+            "manufacturerId": 6
+        },
+        {
+            "id": 73,
+            "name": "C3",
+            "manufacturerId": 6
+        },
+        {
+            "id": 74,
+            "name": "C3 Picasso",
+            "manufacturerId": 6
+        },
+        {
+            "id": 75,
+            "name": "C4",
+            "manufacturerId": 6
+        },
+        {
+            "id": 76,
+            "name": "C4 Picasso",
+            "manufacturerId": 6
+        },
+        {
+            "id": 77,
+            "name": "C5",
+            "manufacturerId": 6
+        },
+        {
+            "id": 78,
+            "name": "C6",
+            "manufacturerId": 6
+        },
+        {
+            "id": 79,
+            "name": "C8",
+            "manufacturerId": 6
+        },
+        {
+            "id": 80,
+            "name": "Cactus",
+            "manufacturerId": 6
+        },
+        {
+            "id": 81,
+            "name": "DS3",
+            "manufacturerId": 6
+        },
+        {
+            "id": 82,
+            "name": "DS4",
+            "manufacturerId": 6
+        },
+        {
+            "id": 83,
+            "name": "DS5",
+            "manufacturerId": 6
+        },
+        {
+            "id": 84,
+            "name": "DS7",
+            "manufacturerId": 6
+        },
+        {
+            "id": 85,
+            "name": "Xsara",
+            "manufacturerId": 6
+        },
+        {
+            "id": 86,
+            "name": "Captur",
+            "manufacturerId": 7
+        },
+        {
+            "id": 87,
+            "name": "Clio",
+            "manufacturerId": 7
+        },
+        {
+            "id": 88,
+            "name": "Fluence",
+            "manufacturerId": 7
+        },
+        {
+            "id": 89,
+            "name": "Kadjar",
+            "manufacturerId": 7
+        },
+        {
+            "id": 90,
+            "name": "Koleos",
+            "manufacturerId": 7
+        },
+        {
+            "id": 91,
+            "name": "Laguna",
+            "manufacturerId": 7
+        },
+        {
+            "id": 92,
+            "name": "Megane",
+            "manufacturerId": 7
+        },
+        {
+            "id": 93,
+            "name": "Megane Conquest",
+            "manufacturerId": 7
+        },
+        {
+            "id": 94,
+            "name": "Scenic",
+            "manufacturerId": 7
+        },
+        {
+            "id": 95,
+            "name": "Talisman",
+            "manufacturerId": 7
+        },
+        {
+            "id": 96,
+            "name": "Thalia",
+            "manufacturerId": 7
+        },
+        {
+            "id": 97,
+            "name": "Twingo",
+            "manufacturerId": 7
+        },
+        {
+            "id": 98,
+            "name": "145",
+            "manufacturerId": 8
+        },
+        {
+            "id": 99,
+            "name": "146",
+            "manufacturerId": 8
+        },
+        {
+            "id": 100,
+            "name": "147",
+            "manufacturerId": 8
+        },
+        {
+            "id": 101,
+            "name": "149",
+            "manufacturerId": 8
+        },
+        {
+            "id": 102,
+            "name": "155",
+            "manufacturerId": 8
+        },
+        {
+            "id": 103,
+            "name": "156",
+            "manufacturerId": 8
+        },
+        {
+            "id": 104,
+            "name": "159",
+            "manufacturerId": 8
+        },
+        {
+            "id": 105,
+            "name": "164",
+            "manufacturerId": 8
+        },
+        {
+            "id": 106,
+            "name": "166",
+            "manufacturerId": 8
+        },
+        {
+            "id": 107,
+            "name": "Brera",
+            "manufacturerId": 8
+        },
+        {
+            "id": 108,
+            "name": "Giulia",
+            "manufacturerId": 8
+        },
+        {
+            "id": 109,
+            "name": "Giulietta",
+            "manufacturerId": 8
+        },
+        {
+            "id": 110,
+            "name": "MiTo",
+            "manufacturerId": 8
+        },
+        {
+            "id": 111,
+            "name": "Stelvio",
+            "manufacturerId": 8
+        },
+        {
+            "id": 112,
+            "name": "4C",
+            "manufacturerId": 8
+        },
+        {
+            "id": 113,
+            "name": "500",
+            "manufacturerId": 9
+        },
+        {
+            "id": 112,
+            "name": "Brava",
+            "manufacturerId": 9
+        },
+        {
+            "id": 112,
+            "name": "Bravo",
+            "manufacturerId": 9
+        },
+        {
+            "id": 112,
+            "name": "Grande Punto",
+            "manufacturerId": 9
+        },
+        {
+            "id": 112,
+            "name": "Panda",
+            "manufacturerId": 9
+        },
+        {
+            "id": 112,
+            "name": "Punto",
+            "manufacturerId": 9
+        },
+        {
+            "id": 112,
+            "name": "Stilo",
+            "manufacturerId": 9
+        },
+        {
+            "id": 112,
+            "name": "Tipo",
+            "manufacturerId": 9
+        },
+        {
+            "id": 112,
+            "name": "Uno",
+            "manufacturerId": 9
+        },
+        {
+            "id": 112,
+            "name": "Spider",
+            "manufacturerId": 9
+        }
+    ]
+}

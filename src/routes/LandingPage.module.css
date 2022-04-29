@@ -16,3 +16,8 @@
 .overlay span{
     color: var(--main-red)
 }
+
+.sectionImage{
+    background-color: red;
+    padding: 3rem;
+}
