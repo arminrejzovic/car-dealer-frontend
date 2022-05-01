@@ -934,7 +934,7 @@
     "ads": [
         {
             "id": 1,
-            "title": "BMW 320 D F30 2015 FULL LED.XENON.KAMERA.",
+            "title": "BMW 320 D F30 2015 FULL LED XENON KAMERA",
             "manufacturerId": 2,
             "modelId": 18,
             "price": 30950,
@@ -954,7 +954,7 @@
 
         {
             "id": 2,
-            "title": "VW PASSAT B8 R LINE LED.NAVI.XENON.KAMERA",
+            "title": "VW PASSAT B8 R LINE LED NAVI XENON KAMERA",
             "manufacturerId": 4,
             "modelId": 49,
             "price": 32600,
@@ -974,7 +974,7 @@
 
         {
             "id": 3,
-            "title": "VW GOLF 7 HIGHLINE 2018 LED.NAVI.EURO 6",
+            "title": "VW GOLF 7 HIGHLINE 2018 LED NAVI EURO 6",
             "manufacturerId": 4,
             "modelId": 47,
             "price": 29900,
@@ -1014,7 +1014,7 @@
 
         {
             "id": 5,
-            "title": "Mercedes-Benz A 180 D SPORT PAKET 7G TRONIC.LED.NAVI.F1",
+            "title": "Mercedes-Benz A 180 D SPORT PAKET 7G TRONIC LED NAVI F1",
             "manufacturerId": 3,
             "modelId": 37,
             "price": 33950,
