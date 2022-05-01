@@ -6,6 +6,7 @@ export interface ButtonProps{
     variant: "filled" | "outlined";
     color: "red" | "green" | "blue";
     icon?: any;
+    onClick?: () => any;
 }
 
 function ButtonRegular(props: ButtonProps) {
@@ -22,6 +23,7 @@ function ButtonRegular(props: ButtonProps) {
                 backgroundColor: `var(--light-${props.color})`,
                 paddingLeft: paddingLeft,
             }}
+            onClick={props.onClick}
         >
             {props.icon}
             {props.text}

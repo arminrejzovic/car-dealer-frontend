@@ -28,6 +28,7 @@
     color: var(--light-red);
     position: absolute;
     bottom: 0;
-    padding-inline: 1ch;
-    padding-bottom: 2px;
+    padding-inline: 1rem;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
 }
