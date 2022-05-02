@@ -3,10 +3,10 @@ import {Phone} from "@mui/icons-material";
 import Styles from "./LandingPage.module.css"
 import {Card, Container, Grid, Typography} from "@mui/material";
 
-import eu from "../img/icons/eu.png";
+import eu from "../img/icons/eu_w.svg";
 import service from "../img/icons/servis.png";
-import allInclusive from "../img/icons/all-inclusive.png";
-import arrivedOnWheels from "../img/icons/arrived-on-wheels.png";
+import allInclusive from "../img/icons/sveplaceno.png";
+import arrivedOnWheels from "../img/icons/tockovi.png";
 
 import scirocco from "../img/scirocco-cropped.png";
 import touran from "../img/turan.png";
@@ -41,32 +41,32 @@ function LandingPage() {
                 </div>
             </div>
             <Container maxWidth={"xl"} style={{padding: "4rem"}}>
-                <Card style={{padding: "4rem 10rem", marginTop: "-10%", textAlign: "center"}}>
+                <Card style={{padding: "3rem 10rem", marginTop: "-10%", textAlign: "center"}}>
                     <Grid container spacing={10}>
-                        <Grid item xl={3} lg={3} md={6} sm={12} xs={12}>
-                            <div>
-                                <img src={eu}/>
-                                <h3>UVOZ IZ EUROPSKE UNIJE</h3>
+                        <Grid item xl={3} lg={3} md={6} sm={6} xs={12}>
+                            <div className={Styles.showcaseItem}>
+                                <img className={Styles.showcaseItemIcon} src={eu}/>
+                                <h3>VOZILA UVEZENA IZ EUROPSKE UNIJE</h3>
                             </div>
                         </Grid>
 
-                        <Grid item xl={3} lg={3} md={6} sm={12} xs={12}>
-                            <div>
-                                <img src={service}/>
+                        <Grid item xl={3} lg={3} md={6} sm={6} xs={12}>
+                            <div className={Styles.showcaseItem}>
+                                <img className={Styles.showcaseItemIcon} src={service}/>
                                 <h3>VOZILA PROVJERENA NA SERVISU</h3>
                             </div>
                         </Grid>
 
-                        <Grid item xl={3} lg={3} md={6} sm={12} xs={12}>
-                            <div>
-                                <img src={allInclusive}/>
+                        <Grid item xl={3} lg={3} md={6} sm={6} xs={12}>
+                            <div className={Styles.showcaseItem}>
+                                <img className={Styles.showcaseItemIcon} src={allInclusive}/>
                                 <h3>PLAĆENO SVE DO REGISTRACIJE</h3>
                             </div>
                         </Grid>
 
-                        <Grid item xl={3} lg={3} md={6} sm={12} xs={12}>
-                            <div>
-                                <img src={arrivedOnWheels}/>
+                        <Grid item xl={3} lg={3} md={6} sm={6} xs={12}>
+                            <div className={Styles.showcaseItem}>
+                                <img className={Styles.showcaseItemIcon} src={arrivedOnWheels}/>
                                 <h3>VOZILA STIGLA NA TOČKOVIMA</h3>
                             </div>
                         </Grid>

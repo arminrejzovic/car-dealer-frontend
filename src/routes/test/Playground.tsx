@@ -116,7 +116,8 @@ function Playground() {
                         // @ts-ignore
                         const res = await updateAd(3, {price: ad?.price+1000});
                         setAd(res);
-                    }}/>
+                    }}
+                />
 
                 <ButtonRegular
                     text={"KREIRAJ DUMMY OGLAS"}

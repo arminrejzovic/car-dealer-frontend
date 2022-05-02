@@ -102,28 +102,10 @@ function SalesForm() {
                 onHover={handleOnHover}
                 onSelect={handleOnSelect}
                 onFocus={handleOnFocus}
-                autoFocus
                 formatResult={formatResult}
                 styling={{borderRadius:"0", zIndex:1000}}
             />
 
-            <Select
-                labelId="manufacturer-select-label"
-                id="manufacturer-select"
-
-                label="Proizvođač"
-                onChange={(event: SelectChangeEvent) => {
-                    setManufacturerID(event.target.value);
-                }}
-            >
-                {
-                    manufacturers.map((manuf) => {
-                        return (
-                            <MenuItem value={manuf.value}>{manuf.label}</MenuItem>
-                        );
-                    })
-                }
-            </Select>
         </div>
     );
 }
