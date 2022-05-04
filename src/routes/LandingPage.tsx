@@ -15,6 +15,7 @@ import ReviewCard from "../components/landing-page/ReviewCard";
 import SalesForm from "../components/landing-page/SalesForm";
 import Location from "../components/landing-page/Location";
 import Footer from "../components/landing-page/Footer";
+import RentForm from "../components/landing-page/RentForm";
 
 
 function LandingPage() {
@@ -40,7 +41,7 @@ function LandingPage() {
                     </div>
                 </div>
             </div>
-            <Container maxWidth={"xl"} style={{padding: "4rem"}}>
+            <Container maxWidth={"xl"} style={{padding: "3rem"}}>
                 <Card style={{padding: "3rem 10rem", marginTop: "-10%", textAlign: "center"}}>
                     <Grid container spacing={10}>
                         <Grid item xl={3} lg={3} md={6} sm={6} xs={12}>
@@ -74,27 +75,27 @@ function LandingPage() {
                 </Card>
 
                 <section style={{marginTop: "2rem"}}>
-                    <h1 style={{fontSize: "2.375rem"}}>PRODAJA AUTOMOBILA</h1>
-                    <Grid container spacing={2}>
-                        <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
+                    <h1 style={{fontSize: "2.375rem", marginBlock: "1.5rem"}}>PRODAJA AUTOMOBILA</h1>
+                    <Grid container spacing={4} alignItems={"center"}>
+                        <Grid item xl={6} lg={6} md={6} sm={12} xs={12} order={{xl:1, lg:1, md:1, sm:1, xs:2}}>
                             <SalesForm/>
                         </Grid>
 
-                        <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
-                            <img className={Styles.sectionImage} src={scirocco}/>
+                        <Grid item xl={6} lg={6} md={6} sm={12} xs={12} order={{xl:2, lg:2, md:2, sm:2, xs:1}}>
+                            <img className={Styles.sectionImage} src={scirocco} alt={"VW Scirocco"}/>
                         </Grid>
                     </Grid>
                 </section>
 
-                <section style={{marginTop: "2rem"}}>
-                    <h1 style={{fontSize: "2.375rem"}}>IZNAJMLJIVANJE AUTOMOBILA</h1>
-                    <Grid container spacing={2}>
+                <section style={{marginTop: "2rem", marginBottom: "2rem"}}>
+                    <h1 style={{fontSize: "2.375rem", marginBlock: "1.5rem"}}>IZNAJMLJIVANJE AUTOMOBILA</h1>
+                    <Grid container spacing={6} alignItems={"center"}>
                         <Grid item xl={6}>
                             <img className={Styles.sectionImage} src={touran}/>
                         </Grid>
 
                         <Grid item xl={6}>
-
+                            <RentForm/>
                         </Grid>
                     </Grid>
                 </section>

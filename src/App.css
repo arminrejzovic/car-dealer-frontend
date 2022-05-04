@@ -37,3 +37,9 @@ input{
 span{
     color: var(--main-red);
 }
+
+section{
+    display: grid;
+    align-items: center;
+    min-height: 85vh;
+}
