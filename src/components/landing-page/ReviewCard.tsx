@@ -12,7 +12,7 @@ interface ReviewProps {
 
 function ReviewCard(props: ReviewProps) {
     return (
-        <Card className={Styles.reviewCard} style={{padding: "1em", borderRadius: "10px"}}>
+        <Card className={Styles.reviewCard}>
             <div className={Styles.userInfo}>
                 <AccountCircleIcon fontSize={"large"}/>
                 <div>

@@ -18,7 +18,7 @@ function AdBrief(props: AdBriefProps) {
         <Card className={Styles.adBrief}>
             <Grid container spacing={2}>
                 <Grid item xl={3} lg={3} md={4} sm={12} xs={12}>
-                    <img style={{height: "100%", width: "100%"}} src={props.thumbnailURL}/>
+                    <img className={Styles.adBriefThumbnail} style={{height: "100%", width: "100%"}} src={props.thumbnailURL}/>
                 </Grid>
 
                 <Grid item xl={7} lg={7} md={5} sm={12} xs={12}>

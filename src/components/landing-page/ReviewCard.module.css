@@ -1,5 +1,7 @@
 .reviewCard{
     height: 100%;
+    padding: 1em;
+    border-radius: 10px;
 }
 
 .reviewCard > *,
