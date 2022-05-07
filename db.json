@@ -1087,5 +1087,13 @@
       "firebaseFolderUrl": "",
       "id": 7
     }
+  ],
+  "images": [
+    {
+      "id": 0,
+      "name": "TEST",
+      "src64": "scrambled",
+      "carId": 1
+    }
   ]
 }

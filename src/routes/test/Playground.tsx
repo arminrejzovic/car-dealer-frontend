@@ -19,8 +19,6 @@ import ImageUploader from "../../components/admin-panel/ImageUploader";
 function Playground() {
     const [ad, setAd] = useState<Ad>();
 
-
-
     useEffect(() => {
         getAdForDemo();
     },[])
@@ -36,8 +34,6 @@ function Playground() {
 
     return (
         <div style={{padding: "2rem"}}>
-            <ImageUploader/>
-
             <div>
                 <img src={ad?.thumbnailUrl} style={{height: "0rem"}}/>
                 <h1>{ad?.title}</h1>
