@@ -1,21 +1,24 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import ButtonRegular from "../../components/common/ButtonRegular";
 import LinkButton from "../../components/common/LinkButton";
-import {DeleteForever, DoneAll, Edit} from "@mui/icons-material";
+import {Add, AddCircleOutline, AddOutlined, DeleteForever, DoneAll, Edit} from "@mui/icons-material";
 import ReviewCard from "../../components/landing-page/ReviewCard";
-import {Grid} from "@mui/material";
+import {Grid, Tooltip} from "@mui/material";
 import AdCard from "../../components/app/AdCard";
 import AdBrief from "../../components/admin-panel/AdBrief";
 import OfferBrief from "../../components/admin-panel/OfferBrief";
 import Gallery from "../../components/common/Gallery";
 import {createNewAd, fetchAdById, fetchAllAds, updateAd} from "../../networking/AdServices";
 import {Ad} from "../../interfaces/Interfaces";
+import ImageUploadPreview from "../../components/common/ImageUploadPreview";
+import {addAbortSignal} from "stream";
+import ImageUploader from "../../components/admin-panel/ImageUploader";
 
 
 
 function Playground() {
     const [ad, setAd] = useState<Ad>();
-    const [encodedImages, setEncodedImages] = useState<any[]>([]);
+
 
 
     useEffect(() => {
@@ -27,42 +30,16 @@ function Playground() {
         setAd(res);
     }
 
-    async function convertToBase64(file:any){
-        return new Promise<any>((resolve, reject) => {
-            const fileReader = new FileReader();
-            fileReader.readAsDataURL(file);
 
-            fileReader.onload = () => {
-                resolve(fileReader.result);
-            }
 
-            fileReader.onerror = (err) => {
-                reject(err);
-            }
-        })
-    }
 
-    async function uploadImages(e: any){
-        const temp = [];
-        for(const file of e.target.files){
-            const file64 = await convertToBase64(file);
-            temp.push(file64);
-        }
-        setEncodedImages(temp);
-    }
 
     return (
         <div style={{padding: "2rem"}}>
-
-            <input type={"file"} accept={"image/jpeg, image/png"} multiple onChange={(e)=>{
-                uploadImages(e).then(() => {
-                    console.log(encodedImages);
-                })
-            }}
-            />
+            <ImageUploader/>
 
             <div>
-                <img src={ad?.thumbnailUrl} style={{height: "10rem"}}/>
+                <img src={ad?.thumbnailUrl} style={{height: "0rem"}}/>
                 <h1>{ad?.title}</h1>
                 <p>
                     {ad?.lowestPrice} to {ad?.price}
