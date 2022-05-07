@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {fetchAllModels} from "../../networking/DataServices";
 import {ReactSearchAutocomplete} from "react-search-autocomplete";
 import {Divider, Grid, InputAdornment, OutlinedInput} from "@mui/material";
@@ -22,20 +22,14 @@ function RentForm() {
         setToday(t.toISOString().slice(0, 10));
     },[]);
 
-    function handleOnSearch(){
-        console.log("SEARCH");
-    }
+    function handleOnSearch(){}
 
-    function handleOnHover(){
+    function handleOnHover(){}
 
-    }
+    function handleOnFocus(){}
 
-    function handleOnSelect(){
-
-    }
-
-    function handleOnFocus(){
-
+    function handleOnSelect(item: {id:number, name:string;}){
+        setQuery(item.name);
     }
 
     async function getModels(){
@@ -74,7 +68,7 @@ function RentForm() {
 
             <Grid container spacing={2}>
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-                    <h3>Cijena</h3>
+                    <h3>Cijena po danu</h3>
                 </Grid>
                 <Grid item xl={6} lg={6} md={6} sm={6} xs={12}>
                     <OutlinedInput
@@ -86,7 +80,7 @@ function RentForm() {
                         onChange={(e) => {
                             setPriceFrom(e.target.value);
                         }}
-                        endAdornment={<InputAdornment position="end">KM</InputAdornment>}
+                        endAdornment={<InputAdornment position="end">BAM</InputAdornment>}
                         inputProps={{
                             'aria-label': 'cijena od',
                             'min': '0',
@@ -104,7 +98,7 @@ function RentForm() {
                         onChange={(e) => {
                             setPriceUpto(e.target.value);
                         }}
-                        endAdornment={<InputAdornment position="end">KM</InputAdornment>}
+                        endAdornment={<InputAdornment position="end">BAM</InputAdornment>}
                         inputProps={{
                             'aria-label': 'cijena do',
                             'min': priceFrom,
@@ -146,7 +140,6 @@ function RentForm() {
                         type={"date"}
                         onChange={(e) => {
                             setDateTo(e.target.value);
-                            alert(e.target.value);
                         }}
                         aria-describedby="outlined-weight-helper-text"
                         inputProps={{

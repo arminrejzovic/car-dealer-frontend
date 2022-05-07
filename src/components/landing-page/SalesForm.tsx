@@ -19,22 +19,6 @@ function SalesForm() {
         getModels();
     },[]);
 
-    function handleOnSearch(){
-        console.log("SEARCH");
-    }
-
-    function handleOnHover(){
-
-    }
-
-    function handleOnSelect(){
-
-    }
-
-    function handleOnFocus(){
-
-    }
-
     async function getModels(){
         const res = await fetchAllModels();
         const models = res.map((model: any) => {
@@ -44,6 +28,16 @@ function SalesForm() {
             }
         })
         setModels(models);
+    }
+
+    function handleOnSearch(){}
+
+    function handleOnHover(){}
+
+    function handleOnFocus(){}
+
+    function handleOnSelect(item: {id:number, name:string;}){
+        setQuery(item.name);
     }
 
     const formatResult = (item: any) => {
@@ -83,7 +77,7 @@ function SalesForm() {
                         onChange={(e) => {
                             setPriceFrom(e.target.value);
                         }}
-                        endAdornment={<InputAdornment position="end">KM</InputAdornment>}
+                        endAdornment={<InputAdornment position="end">BAM</InputAdornment>}
                         inputProps={{
                             'aria-label': 'cijena od',
                             'min': '0',
@@ -101,7 +95,7 @@ function SalesForm() {
                         onChange={(e) => {
                             setPriceUpto(e.target.value);
                         }}
-                        endAdornment={<InputAdornment position="end">KM</InputAdornment>}
+                        endAdornment={<InputAdornment position="end">BAM</InputAdornment>}
                         inputProps={{
                             'aria-label': 'cijena do',
                             'min': priceFrom,
