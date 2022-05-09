@@ -1,4 +1,4 @@
-export interface Ad{
+export interface AdExpanded{
     "id": number;
     "title": string;
     "manufacturerId": number;

@@ -1,4 +1,4 @@
-interface Ad{
+export interface Ad{
     "title": string;
     "manufacturerId": number;
     "modelId": number;
@@ -15,6 +15,16 @@ interface Ad{
     "lowestPrice": number;
     "thumbnailUrl": string;
     "firebaseFolderUrl": string;
+    "emissionStandard"?: string;
+    "color"?: string;
+    "parkingCamera"?: string;
+    "rimSize"?: number;
+    "gears"?: string;
+    "lights"?: string;
+    "tyres"?: string;
+    "doors"?: string;
+    "registrationUntil"?: string;
+    "description"?: string;
 }
 
 export async function fetchAllAds(){
@@ -28,7 +38,7 @@ export async function fetchAllAds(){
 }
 
 export async function fetchAdById(id: number){
-    const res = await fetch(`http://localhost:5000/ads/${id}?_expand=manufacturer&_expand=model&_expand=car_type&_expand=fuel_type&_expand=drive_type`);
+    const res = await fetch(`http://localhost:5000/ads/${id}?_expand=manufacturer&_expand=model&_expand=car_type&_expand=fuel_type&_expand=drive_type$_expand=images`);
     if(res.ok){
         return res.json();
     }
@@ -103,4 +113,26 @@ export async function updateAd(id: number, changes: Changes){
     else {
         return {error: "Ažuriranje oglasa nije uspjelo", status: res.status};
     }
+}
+
+export function getDummyAd():Ad{
+    return {
+        title: "",
+        manufacturerId: 1,
+        modelId: 1,
+        price: 0,
+        year: 2022,
+        mileage: 0,
+        volume: 1,
+        horsepower: 0,
+        car_typeId: 1,
+        fuel_typeId: 1,
+        drive_typeId: 1,
+        transmission: "Manuelni",
+        availableForRent: false,
+        lowestPrice: 0,
+        thumbnailUrl: "",
+        firebaseFolderUrl:"",
+        registrationUntil: "2023-01"
+    };
 }

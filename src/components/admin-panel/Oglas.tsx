@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import {Card, Grid, InputAdornment, makeStyles, OutlinedInput, TextField} from "@mui/material";
-import {Ad} from "../../interfaces/Interfaces";
+import {AdExpanded as Ad} from "../../interfaces/Interfaces";
 import {fetchAdById} from "../../networking/AdServices";
 import Gallery from "../common/Gallery";
 import ButtonRegular from "../common/ButtonRegular";
@@ -56,7 +56,7 @@ function Oglas() {
                                     step: '100'
                                 }}
                                 InputProps={{
-                                    endAdornment: <InputAdornment position="end">KM</InputAdornment>
+                                    endAdornment: <InputAdornment position="end">BAM</InputAdornment>
                                 }}
                             />
                         </Grid>

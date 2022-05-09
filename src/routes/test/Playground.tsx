@@ -1,19 +1,9 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import ButtonRegular from "../../components/common/ButtonRegular";
-import LinkButton from "../../components/common/LinkButton";
-import {Add, AddCircleOutline, AddOutlined, DeleteForever, DoneAll, Edit} from "@mui/icons-material";
-import ReviewCard from "../../components/landing-page/ReviewCard";
-import {Grid, Tooltip} from "@mui/material";
-import AdCard from "../../components/app/AdCard";
-import AdBrief from "../../components/admin-panel/AdBrief";
+import {Grid} from "@mui/material";
 import OfferBrief from "../../components/admin-panel/OfferBrief";
-import Gallery from "../../components/common/Gallery";
-import {createNewAd, fetchAdById, fetchAllAds, updateAd} from "../../networking/AdServices";
-import {Ad} from "../../interfaces/Interfaces";
-import ImageUploadPreview from "../../components/common/ImageUploadPreview";
-import {addAbortSignal} from "stream";
-import ImageUploader from "../../components/admin-panel/ImageUploader";
-
+import {createNewAd, fetchAdById, updateAd} from "../../networking/AdServices";
+import {AdExpanded as Ad} from "../../interfaces/Interfaces";
 
 
 function Playground() {
@@ -27,10 +17,6 @@ function Playground() {
         const res = await fetchAdById(3);
         setAd(res);
     }
-
-
-
-
 
     return (
         <div style={{padding: "2rem"}}>

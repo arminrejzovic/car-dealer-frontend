@@ -48,5 +48,35 @@ export async function fetchManufacturersByCountry(countryId: number){
     }
 }
 
+export async function fetchAllCarTypes(){
+    const res = await fetch(`http://localhost:5000/car_types`);
+    if(res.ok){
+        return res.json();
+    }
+    else {
+        return {error: "Pretraga nije uspjela", status: res.status};
+    }
+}
+
+export async function fetchAllFuelTypes(){
+    const res = await fetch(`http://localhost:5000/fuel_types`);
+    if(res.ok){
+        return res.json();
+    }
+    else {
+        return {error: "Pretraga nije uspjela", status: res.status};
+    }
+}
+
+export async function fetchAllDriveTypes(){
+    const res = await fetch(`http://localhost:5000/drive_types`);
+    if(res.ok){
+        return res.json();
+    }
+    else {
+        return {error: "Pretraga nije uspjela", status: res.status};
+    }
+}
+
 
 

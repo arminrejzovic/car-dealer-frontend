@@ -12,7 +12,7 @@ function ImageUploadPreview(props: IUPProps) {
 
     return (
         <div onMouseOver={() => setShowRemove(true)} onMouseLeave={() => setShowRemove(false)} style={{width: "100%", position: "relative"}}>
-            <img src={props.src64} style={{objectFit: "cover", width: "100%"}}/>
+            <img src={props.src64} style={{objectFit: "cover", width: "100%", aspectRatio: "16/9"}}/>
             {
                 showRemove && (
                     <div style={{position: "absolute", left: 0, top: 0, width: "100%", height: "100%", zIndex: 1000, backgroundColor: "#000000aa", display: "flex", alignItems: "center", justifyContent: "center", border: "4px solid red"}}>

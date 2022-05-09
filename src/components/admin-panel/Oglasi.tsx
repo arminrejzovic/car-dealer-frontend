@@ -5,7 +5,7 @@ import {ReactSearchAutocomplete} from "react-search-autocomplete";
 import {Grid} from "@mui/material";
 import AdBrief from "./AdBrief";
 import {fetchAllAds} from "../../networking/AdServices";
-import {Ad} from "../../interfaces/Interfaces";
+import {AdExpanded as Ad} from "../../interfaces/Interfaces";
 
 function Oglasi() {
     const [ads, setAds] = useState<Ad[]>([]);
