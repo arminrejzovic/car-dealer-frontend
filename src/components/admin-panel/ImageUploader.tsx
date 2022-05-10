@@ -9,7 +9,6 @@ interface ImageUploaderProps{
 }
 
 function ImageUploader(props: ImageUploaderProps) {
-    //const [encodedImages, setEncodedImages] = useState<any[]>([]);
     const hiddenInputRef = useRef<HTMLInputElement>(null);
 
     async function convertToBase64(file:any){
@@ -63,7 +62,6 @@ function ImageUploader(props: ImageUploaderProps) {
                                     accept={"image/jpeg, image/png"}
                                     multiple style={{display: "none"}}
                                     onChange={(e) => {
-                                        console.log("CHANGE", e);
                                         uploadImages(e);
                                     }}
                                 />

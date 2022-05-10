@@ -9,6 +9,7 @@ import AdminPanelLobby from "./components/admin-panel/AdminPanelLobby";
 import Oglasi from "./components/admin-panel/Oglasi";
 import NewAd from "./components/admin-panel/NewAd";
 import Oglas from "./components/admin-panel/Oglas";
+import EditAd from "./components/admin-panel/EditAd";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
                     <Route index element={<AdminPanelLobby/>}/>
                     <Route path={"oglasi"} element={<Oglasi/>}/>
                     <Route path={"novi"} element={<NewAd/>}/>
-                    <Route path={":id"} element={<Oglas/>}/>
+                    <Route path={":id"} element={<EditAd/>}/>
                     <Route path={"ponude"}/>
                     <Route path={"bukiranja"}/>
                     <Route path={"saopštenja"}/>

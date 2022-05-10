@@ -1,5 +1,4 @@
-export interface AdExpanded{
-    "id": number;
+export interface Ad{
     "title": string;
     "manufacturerId": number;
     "modelId": number;
@@ -16,12 +15,27 @@ export interface AdExpanded{
     "lowestPrice": number;
     "thumbnailUrl": string;
     "firebaseFolderUrl": string;
+    "emissionStandard": string;
+    "color": string;
+    "parkingCamera": string;
+    "rimSize": number;
+    "gears": string;
+    "lights": string;
+    "tyres": string;
+    "doors": string;
+    "registrationUntil": string;
+    "description": string;
+    "dateCreated": string;
+    "images": Image[];
+}
+
+export interface AdExpanded extends Ad{
+    "id": number;
     "manufacturer": Manufacturer;
     "model": Model;
     "car_type": SimpleType;
     "fuel_type": SimpleType;
     "drive_type": SimpleType;
-    "dateCreated": string;
 }
 
 export interface Manufacturer{
@@ -39,4 +53,17 @@ export interface Model{
 export interface SimpleType{
     id: number;
     type: string;
+}
+
+export interface Image{
+    id: number;
+    src64: string;
+    adId: number;
+}
+
+export interface Announcement{
+    id: number;
+    title: string;
+    text: string;
+    dateCreated: string;
 }

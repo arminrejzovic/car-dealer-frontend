@@ -1,31 +1,4 @@
-export interface Ad{
-    "title": string;
-    "manufacturerId": number;
-    "modelId": number;
-    "price": number;
-    "year": number;
-    "mileage": number;
-    "volume": number;
-    "horsepower": number;
-    "car_typeId": number;
-    "fuel_typeId": number;
-    "drive_typeId": number;
-    "transmission": string;
-    "availableForRent": boolean;
-    "lowestPrice": number;
-    "thumbnailUrl": string;
-    "firebaseFolderUrl": string;
-    "emissionStandard"?: string;
-    "color"?: string;
-    "parkingCamera"?: string;
-    "rimSize"?: number;
-    "gears"?: string;
-    "lights"?: string;
-    "tyres"?: string;
-    "doors"?: string;
-    "registrationUntil"?: string;
-    "description"?: string;
-}
+import {Ad} from "../interfaces/Interfaces";
 
 export async function fetchAllAds(){
     const res = await fetch("http://localhost:5000/ads?_expand=manufacturer&_expand=model&_expand=car_type&_expand=fuel_type&_expand=drive_type");
@@ -38,7 +11,7 @@ export async function fetchAllAds(){
 }
 
 export async function fetchAdById(id: number){
-    const res = await fetch(`http://localhost:5000/ads/${id}?_expand=manufacturer&_expand=model&_expand=car_type&_expand=fuel_type&_expand=drive_type$_expand=images`);
+    const res = await fetch(`http://localhost:5000/ads/${id}?_expand=manufacturer&_expand=model&_expand=car_type&_expand=fuel_type&_expand=drive_type&_embed=images`);
     if(res.ok){
         return res.json();
     }
@@ -75,27 +48,9 @@ export async function createNewAd(ad: Ad){
     }
 }
 
-interface Changes{
-    "title"?: string;
-    "manufacturerId"?: number;
-    "modelId"?: number;
-    "price"?: number;
-    "year"?: number;
-    "mileage"?: number;
-    "volume"?: number;
-    "horsepower"?: number;
-    "car_typeId"?: number;
-    "fuel_typeId"?: number;
-    "drive_typeId"?: number;
-    "transmission"?: string;
-    "availableForRent"?: boolean;
-    "lowestPrice"?: number;
-    "thumbnailUrl"?: string;
-}
-
-export async function updateAd(id: number, changes: Changes){
-    const current = await fetchAdById(id);
-    const updatedAd = {...current, ...changes};
+export async function updateAd(newData: Ad, id: number){
+    //const current = await fetchAdById(id);
+    //const updatedAd = {...current, ...changes};
 
     const res = await fetch(`http://localhost:5000/ads/${id}`,
         {
@@ -103,7 +58,7 @@ export async function updateAd(id: number, changes: Changes){
             headers: {
                 "Content-type": "application/json"
             },
-            body: JSON.stringify(updatedAd)
+            body: JSON.stringify(newData)
         }
     );
 
@@ -116,7 +71,17 @@ export async function updateAd(id: number, changes: Changes){
 }
 
 export function getDummyAd():Ad{
+    const today = new Date();
     return {
+        color: "Bijela",
+        description: "Mirel",
+        doors: "2/3",
+        emissionStandard: "Euro 1",
+        gears: "3+R",
+        lights: "Ostalo",
+        parkingCamera: "Nema",
+        rimSize: 0,
+        tyres: "Ljetne",
         title: "",
         manufacturerId: 1,
         modelId: 1,
@@ -133,6 +98,8 @@ export function getDummyAd():Ad{
         lowestPrice: 0,
         thumbnailUrl: "",
         firebaseFolderUrl:"",
-        registrationUntil: "2023-01"
+        registrationUntil: "2023-01",
+        dateCreated: `${today.getDay()}.${today.getMonth()}.${today.getFullYear()}.`,
+        images:[{id:0, src64: "", adId: 0}]
     };
 }

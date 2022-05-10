@@ -35,7 +35,7 @@ function AdBrief(props: AdBriefProps) {
 
                 <Grid item xl={2} lg={2} md={3} sm={12} xs={12}>
                     <div style={{height:"100%", display: "grid", gap: "1rem"}}>
-                        <LinkButton linkTo={"/playground"} text={"MODIFIKUJ"} variant={"filled"} color={"blue"} icon={<Edit/>}/>
+                        <LinkButton linkTo={`/admin/${props.carID}`} text={"MODIFIKUJ"} variant={"filled"} color={"blue"} icon={<Edit/>}/>
                         <ButtonRegular text={"PRODATO"} variant={"filled"} color={"green"} icon={<DoneAll/>}/>
                         <ButtonRegular text={"PONIŠTI"} variant={"filled"} color={"red"} icon={<DeleteForever/>}/>
                     </div>

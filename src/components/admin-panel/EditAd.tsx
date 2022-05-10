@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import ImageUploader from "./ImageUploader";
-import {Ad, Manufacturer, Model, SimpleType} from "../../interfaces/Interfaces";
+import React, {useLayoutEffect, useState} from 'react';
+import {useParams} from "react-router-dom";
+import {Ad, Image, Manufacturer, Model, SimpleType} from "../../interfaces/Interfaces";
+import {fetchAdById, getDummyAd, updateAd} from "../../networking/AdServices";
 import {
     fetchAllCarTypes,
     fetchAllDriveTypes,
@@ -8,10 +9,13 @@ import {
     fetchAllManufacturers,
     fetchAllModels
 } from "../../networking/DataServices";
+import ImageUploader from "./ImageUploader";
 import {
     Checkbox,
-    FormControl, FormControlLabel,
-    FormHelperText, Grid,
+    FormControl,
+    FormControlLabel,
+    FormHelperText,
+    Grid,
     InputAdornment,
     InputLabel,
     MenuItem,
@@ -19,17 +23,17 @@ import {
     SelectChangeEvent,
     TextField
 } from "@mui/material";
-import {DatePicker} from '@mui/x-date-pickers/DatePicker';
-import {createNewAd, getDummyAd} from "../../networking/AdServices";
 import Styles from "../landing-page/SalesForm.module.css";
 import {LocalizationProvider} from "@mui/x-date-pickers";
 import {AdapterDateFns} from "@mui/x-date-pickers/AdapterDateFns";
+import {DatePicker} from "@mui/x-date-pickers/DatePicker";
 import ButtonRegular from "../common/ButtonRegular";
-import {uploadImage} from "../../networking/ImageServices";
 
-function NewAd() {
-    const [encodedImages, setEncodedImages] = useState<any[]>([]);
+function EditAd() {
+    const { id } = useParams();
     const [ad, setAd] = useState<Ad>(getDummyAd());
+
+    const [encodedImages, setEncodedImages] = useState<string[]>([]);
 
     const [manufacturers, setManufacturers] = useState<Manufacturer[]>();
     const [models, setModels] = useState<Model[]>();
@@ -37,26 +41,36 @@ function NewAd() {
     const [fuelTypes, setFuelTypes] = useState<SimpleType[]>();
     const [driveTypes, setDriveTypes] = useState<SimpleType[]>();
 
-    useEffect(() => {
-        setData();
+    useLayoutEffect(() => {
+        getAd().then(() => {
+
+        });
     },[]);
 
-    async function setData(){
-        let res = await fetchAllManufacturers();
-        setManufacturers(res);
-        res = await fetchAllModels();
-        setModels(res);
-        res = await fetchAllCarTypes();
-        setCarTypes(res);
-        res = await fetchAllFuelTypes();
-        setFuelTypes(res);
-        res = await fetchAllDriveTypes();
-        setDriveTypes(res);
+    async function getAd(){
+        // @ts-ignore
+        const res = await fetchAdById(+id);
+        setAd(res);
+        const images = res.images.map((img: Image) => {
+            return img.src64;
+        })
+        setEncodedImages(images);
+
+        let data = await fetchAllManufacturers();
+        setManufacturers(data);
+        data = await fetchAllModels();
+        setModels(data);
+        data = await fetchAllCarTypes();
+        setCarTypes(data);
+        data = await fetchAllFuelTypes();
+        setFuelTypes(data);
+        data = await fetchAllDriveTypes();
+        setDriveTypes(data);
     }
 
     return (
         <div style={{display: "grid", gap: "3rem", padding: "3rem"}}>
-            <h1>NOVI OGLAS</h1>
+            <h1 onClick={() => console.error(ad, encodedImages)}>UREDI OGLAS</h1>
 
             <div>
                 <h3>1. Slike</h3>
@@ -600,14 +614,9 @@ function NewAd() {
                     variant={"filled"}
                     color={"red"}
                     onClick={async () => {
-                        const res = await createNewAd(ad);
-                        const carId = res.id;
-                        for(const img of encodedImages){
-                            await uploadImage({
-                                src64: img,
-                                carId: carId
-                            });
-                        }
+                        // @ts-ignore
+                        const res = await updateAd(ad, +id);
+                        console.log(res);
                     }}
                 />
             </div>
@@ -615,4 +624,4 @@ function NewAd() {
     );
 }
 
-export default NewAd;
+export default EditAd;

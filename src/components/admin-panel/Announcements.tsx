@@ -1,50 +1,55 @@
 import React, {useEffect, useState} from 'react';
+import {AdExpanded as Ad, Announcement} from "../../interfaces/Interfaces";
+import {fetchAllAds} from "../../networking/AdServices";
+import {Grid} from "@mui/material";
 import ButtonRegular from "../common/ButtonRegular";
 import {Add} from "@mui/icons-material";
 import {ReactSearchAutocomplete} from "react-search-autocomplete";
-import {Grid} from "@mui/material";
 import AdBrief from "./AdBrief";
-import {fetchAllAds} from "../../networking/AdServices";
-import {AdExpanded as Ad} from "../../interfaces/Interfaces";
+import {fetchAllAnnouncements} from "../../networking/AnnouncementServices";
+import AnnouncementBrief from "./AnnouncementBrief";
 
-function Oglasi() {
-    const [ads, setAds] = useState<Ad[]>([]);
-    const [results, setResults] = useState<Ad[]>([]);
+function Announcements() {
+    const [announcements, setAnnouncements] = useState<Announcement[]>([]);
+    const [results, setResults] = useState<Announcement[]>([]);
 
-    async function getAds(){
-        const res = await fetchAllAds();
-        setAds(res);
+    async function getAnnouncements(){
+        const res = await fetchAllAnnouncements();
+        setAnnouncements(res);
         setResults(res);
     }
 
     useEffect(() => {
-        getAds();
+        getAnnouncements();
     }, []);
 
     return (
         <div style={{padding: "3rem", display: "grid", gap: "3rem"}}>
             <Grid container spacing={2}>
                 <Grid item xl={2} lg={2} md={3} sm={4} xs={5.5}>
-                    <h2 style={{fontSize:"2rem"}}>OGLASI</h2>
+                    <h2 style={{fontSize:"2rem"}}>SAOPŠTENJA</h2>
                 </Grid>
                 <Grid item xl={8} lg={8} md={6} sm={4} xs={0}/>
                 <Grid item xl={2} lg={2} md={3} sm={4} xs={6}>
-                    <ButtonRegular text={"NOVI OGLAS"} variant={"filled"} color={"red"} icon={<Add/>}/>
+                    <ButtonRegular text={"NOVO SAOPŠTENJE"} variant={"filled"} color={"red"} icon={<Add/>}/>
                 </Grid>
             </Grid>
 
             <ReactSearchAutocomplete
                 items={[]}
                 onSearch={(keyword)=>{
-                    setResults(ads.filter((ad) => {
-                        return ad.title.toLowerCase().includes(keyword.toLowerCase());
+                    setResults(announcements.filter((announcement) => {
+                        const title = announcement.title.toLowerCase();
+                        const text = announcement.text.toLowerCase();
+                        const keywordLowercase = keyword.toLowerCase();
+                        return (title.includes(keywordLowercase) || text.includes(keywordLowercase));
                     }))
                 }}
                 onHover={()=>{}}
                 onSelect={()=>{}}
                 onFocus={()=>{}}
                 formatResult={()=>{}}
-                placeholder={"Pretraži oglase"}
+                placeholder={"Pretraži saopštenja"}
                 styling={{borderRadius:"0", zIndex:1000}}
             />
 
@@ -53,13 +58,7 @@ function Oglasi() {
                     results.map((item) => {
                         return (
                             <Grid item xl={12} lg={12} md={12} sm={6} xs={12}>
-                                <AdBrief
-                                    carID={item.id}
-                                    thumbnailURL={item.thumbnailUrl}
-                                    adTitle={item.title}
-                                    dateCreated={item.dateCreated || ''}
-                                    price={item.price}
-                                />
+                                <AnnouncementBrief announcement={item}/>
                             </Grid>
                         );
                     })
@@ -69,4 +68,4 @@ function Oglasi() {
     );
 }
 
-export default Oglasi;
+export default Announcements;
