@@ -10,6 +10,7 @@ import Oglasi from "./components/admin-panel/Oglasi";
 import NewAd from "./components/admin-panel/NewAd";
 import Oglas from "./components/admin-panel/Oglas";
 import EditAd from "./components/admin-panel/EditAd";
+import Announcements from "./components/admin-panel/Announcements";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
                     <Route path={":id"} element={<EditAd/>}/>
                     <Route path={"ponude"}/>
                     <Route path={"bukiranja"}/>
-                    <Route path={"saopštenja"}/>
+                    <Route path={"saopstenja"} element={<Announcements/>}/>
                     <Route path={"uredi_podatke"}/>
                     <Route path={"login"}/>
                 </Route>

@@ -1,9 +1,11 @@
 import React from 'react';
-import { DeleteForever, DoneAll, Edit } from "@mui/icons-material";
-import { Card, Grid } from "@mui/material";
+import {DeleteForever, DoneAll, Edit} from "@mui/icons-material";
+import {Card, Grid} from "@mui/material";
 import ButtonRegular from "../common/ButtonRegular";
 import LinkButton from "../common/LinkButton";
 import Styles from "./AdBrief.module.css"
+import {AdExpanded} from "../../interfaces/Interfaces";
+import {deleteAdById} from "../../networking/AdServices";
 
 export interface AdBriefProps{
     carID: number;
@@ -11,6 +13,9 @@ export interface AdBriefProps{
     adTitle: string;
     dateCreated: string;
     price: number;
+
+    adListRef: AdExpanded[];
+    adMutator: Function;
 }
 
 function AdBrief(props: AdBriefProps) {
@@ -37,7 +42,19 @@ function AdBrief(props: AdBriefProps) {
                     <div style={{height:"100%", display: "grid", gap: "1rem"}}>
                         <LinkButton linkTo={`/admin/${props.carID}`} text={"MODIFIKUJ"} variant={"filled"} color={"blue"} icon={<Edit/>}/>
                         <ButtonRegular text={"PRODATO"} variant={"filled"} color={"green"} icon={<DoneAll/>}/>
-                        <ButtonRegular text={"PONIŠTI"} variant={"filled"} color={"red"} icon={<DeleteForever/>}/>
+                        <ButtonRegular
+                            text={"PONIŠTI"}
+                            variant={"filled"}
+                            color={"red"}
+                            icon={<DeleteForever/>}
+                            onClick={async () => {
+                                await deleteAdById(props.carID);
+                                const temp = props.adListRef.filter(ad => {
+                                    return ad.id !== props.carID;
+                                })
+                                props.adMutator(temp);
+                            }}
+                        />
                     </div>
                 </Grid>
             </Grid>

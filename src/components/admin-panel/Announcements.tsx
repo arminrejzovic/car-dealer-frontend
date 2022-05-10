@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {AdExpanded as Ad, Announcement} from "../../interfaces/Interfaces";
-import {fetchAllAds} from "../../networking/AdServices";
+import {Announcement} from "../../interfaces/Interfaces";
 import {Grid} from "@mui/material";
 import ButtonRegular from "../common/ButtonRegular";
 import {Add} from "@mui/icons-material";
 import {ReactSearchAutocomplete} from "react-search-autocomplete";
-import AdBrief from "./AdBrief";
 import {fetchAllAnnouncements} from "../../networking/AnnouncementServices";
 import AnnouncementBrief from "./AnnouncementBrief";
 
@@ -58,7 +56,7 @@ function Announcements() {
                     results.map((item) => {
                         return (
                             <Grid item xl={12} lg={12} md={12} sm={6} xs={12}>
-                                <AnnouncementBrief announcement={item}/>
+                                <AnnouncementBrief announcement={item} announcementListRef={announcements} announcementMutator={setResults}/>
                             </Grid>
                         );
                     })

@@ -74,7 +74,7 @@ export function getDummyAd():Ad{
     const today = new Date();
     return {
         color: "Bijela",
-        description: "Mirel",
+        description: "",
         doors: "2/3",
         emissionStandard: "Euro 1",
         gears: "3+R",

@@ -5,16 +5,17 @@ import {ReactSearchAutocomplete} from "react-search-autocomplete";
 import {Grid} from "@mui/material";
 import AdBrief from "./AdBrief";
 import {fetchAllAds} from "../../networking/AdServices";
-import {AdExpanded as Ad} from "../../interfaces/Interfaces";
+import {AdExpanded, AdExpanded as Ad} from "../../interfaces/Interfaces";
+import LinkButton from "../common/LinkButton";
 
 function Oglasi() {
-    const [ads, setAds] = useState<Ad[]>([]);
-    const [results, setResults] = useState<Ad[]>([]);
+    const [ads, setAds] = useState<AdExpanded[]>([]);
+
+    const [query, setQuery] = useState("");
 
     async function getAds(){
         const res = await fetchAllAds();
         setAds(res);
-        setResults(res);
     }
 
     useEffect(() => {
@@ -29,28 +30,25 @@ function Oglasi() {
                 </Grid>
                 <Grid item xl={8} lg={8} md={6} sm={4} xs={0}/>
                 <Grid item xl={2} lg={2} md={3} sm={4} xs={6}>
-                    <ButtonRegular text={"NOVI OGLAS"} variant={"filled"} color={"red"} icon={<Add/>}/>
+                    <LinkButton linkTo={"/admin/novi"} text={"NOVI OGLAS"} variant={"filled"} color={"red"} icon={<Add/>}/>
                 </Grid>
             </Grid>
 
             <ReactSearchAutocomplete
                 items={[]}
                 onSearch={(keyword)=>{
-                    setResults(ads.filter((ad) => {
+                    setQuery(keyword.toLowerCase());
+                    /*setResults(ads.filter((ad) => {
                         return ad.title.toLowerCase().includes(keyword.toLowerCase());
-                    }))
+                    }))*/
                 }}
-                onHover={()=>{}}
-                onSelect={()=>{}}
-                onFocus={()=>{}}
-                formatResult={()=>{}}
                 placeholder={"Pretraži oglase"}
                 styling={{borderRadius:"0", zIndex:1000}}
             />
 
             <Grid container spacing={2}>
                 {
-                    results.map((item) => {
+                    ads.filter((ad) => {return ad.title.toLowerCase().includes(query)}).map((item) => {
                         return (
                             <Grid item xl={12} lg={12} md={12} sm={6} xs={12}>
                                 <AdBrief
@@ -59,6 +57,8 @@ function Oglasi() {
                                     adTitle={item.title}
                                     dateCreated={item.dateCreated || ''}
                                     price={item.price}
+                                    adListRef={ads}
+                                    adMutator={setAds}
                                 />
                             </Grid>
                         );

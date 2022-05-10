@@ -40,20 +40,23 @@ function Playground() {
 
             </div>
 
-            <Grid container spacing={2} style={{padding: "1rem", marginBottom: "2rem"}}>
-                <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-                    <OfferBrief
-                        carID={1}
-                        thumbnailURL={"https://s9.pik.ba/galerija/2021-10/21/03/slika-502636-617171f2463a1-velika.jpg"}
-                        adTitle={"BMW 320 D F30"}
-                        dateCreated={"25.08.2021."}
-                        price={29950}
-                        username={"veldin_s"}
-                        offer={28000}
-                    />
+            {
+                /*
+                false && <Grid container spacing={2} style={{padding: "1rem", marginBottom: "2rem"}}>
+                    <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+                        <OfferBrief
+                            carID={1}
+                            thumbnailURL={"https://s9.pik.ba/galerija/2021-10/21/03/slika-502636-617171f2463a1-velika.jpg"}
+                            adTitle={"BMW 320 D F30"}
+                            dateCreated={"25.08.2021."}
+                            price={29950}
+                            username={"veldin_s"}
+                            offer={28000}
+                        />
+                    </Grid>
                 </Grid>
-
-            </Grid>
+                 */
+            }
         </div>
     );
 }
