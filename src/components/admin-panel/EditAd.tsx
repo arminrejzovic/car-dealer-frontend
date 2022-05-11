@@ -28,12 +28,14 @@ import {LocalizationProvider} from "@mui/x-date-pickers";
 import {AdapterDateFns} from "@mui/x-date-pickers/AdapterDateFns";
 import {DatePicker} from "@mui/x-date-pickers/DatePicker";
 import ButtonRegular from "../common/ButtonRegular";
+import ImageEditor from "./ImageEditor";
 
 function EditAd() {
     const { id } = useParams();
     const [ad, setAd] = useState<Ad>(getDummyAd());
 
-    const [encodedImages, setEncodedImages] = useState<string[]>([]);
+    const [existingImages, setExistingImages] = useState<Image[]>([]);
+    const [newImages, setNewImages] = useState<string[]>([]);
 
     const [manufacturers, setManufacturers] = useState<Manufacturer[]>();
     const [models, setModels] = useState<Model[]>();
@@ -51,10 +53,7 @@ function EditAd() {
         // @ts-ignore
         const res = await fetchAdById(+id);
         setAd(res);
-        const images = res.images.map((img: Image) => {
-            return img.src64;
-        })
-        setEncodedImages(images);
+        setExistingImages(res.images);
 
         let data = await fetchAllManufacturers();
         setManufacturers(data);
@@ -70,11 +69,18 @@ function EditAd() {
 
     return (
         <div style={{display: "grid", gap: "3rem", padding: "3rem"}}>
-            <h1 onClick={() => console.error(ad, encodedImages)}>UREDI OGLAS</h1>
+            <h1 onClick={() => console.error(ad, existingImages)}>UREDI OGLAS</h1>
 
             <div>
                 <h3>1. Slike</h3>
-                <ImageUploader encodedImages={encodedImages} encodedImagesMutator={setEncodedImages}/>
+                <ImageEditor
+                    existingImages={existingImages}
+                    newImages={newImages}
+                    existingImagesMutator={setExistingImages}
+                    newImagesMutator={setNewImages}
+                    //@ts-ignore
+                    adId={+id}
+                />
             </div>
 
             <Grid container spacing={3}>

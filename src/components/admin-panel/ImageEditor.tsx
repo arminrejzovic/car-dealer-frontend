@@ -1,25 +1,28 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
+import {Image} from "../../interfaces/Interfaces";
 import {Grid, Tooltip} from "@mui/material";
 import ImageUploadPreview from "../common/ImageUploadPreview";
 import {AddCircleOutline} from "@mui/icons-material";
-import {convertToBase64} from "../../networking/ImageServices";
+import {convertToBase64, deleteImageById} from "../../networking/ImageServices";
 
-interface ImageUploaderProps{
-    encodedImages: any[];
-    encodedImagesMutator: Function;
+interface ImageEditorProps{
+    existingImages: Image[];
+    newImages: string[];
+    existingImagesMutator: Function;
+    newImagesMutator: Function;
+    adId: number;
 }
 
-function ImageUploader(props: ImageUploaderProps) {
+function ImageEditor(props: ImageEditorProps) {
     const hiddenInputRef = useRef<HTMLInputElement>(null);
 
-
     async function uploadImages(e: any){
-        const temp = [...props.encodedImages];
+        const temp = [...props.newImages];
         for(const file of e.target.files){
             const file64 = await convertToBase64(file);
             temp.push(file64);
         }
-        props.encodedImagesMutator(temp);
+        props.newImagesMutator(temp);
     }
 
     return (
@@ -28,12 +31,26 @@ function ImageUploader(props: ImageUploaderProps) {
 
             <Grid container spacing={2}>
                 {
-                    props.encodedImages.map((img) => {
+                    props.existingImages.map((img) => {
+                        return (
+                            <Grid item xl={2}>
+                                <ImageUploadPreview src64={img.src64} onRemove={async () => {
+                                    await deleteImageById(props.adId);
+                                    alert("Image deleted");
+                                    let temp = props.existingImages.filter((item) => item.id !== img.id);
+                                    props.existingImagesMutator(temp);
+                                }}/>
+                            </Grid>
+                        )
+                    })
+                }
+                {
+                    props.newImages.map((img) => {
                         return (
                             <Grid item xl={2}>
                                 <ImageUploadPreview src64={img} onRemove={() => {
-                                    let temp = props.encodedImages.filter((item) => item !== img);
-                                    props.encodedImagesMutator(temp);
+                                    let temp = props.newImages.filter((item) => item !== img);
+                                    props.newImagesMutator(temp);
                                 }}/>
                             </Grid>
                         )
@@ -41,7 +58,7 @@ function ImageUploader(props: ImageUploaderProps) {
                 }
                 <Grid item xl={2}>
                     {
-                        props.encodedImages.length > 0 && (
+                        props.existingImages.length > 0 && (
                             <div style={{display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#fafafaaa", height: "100%"}}>
                                 <input
                                     ref={hiddenInputRef}
@@ -66,4 +83,4 @@ function ImageUploader(props: ImageUploaderProps) {
     );
 }
 
-export default ImageUploader;
+export default ImageEditor;
