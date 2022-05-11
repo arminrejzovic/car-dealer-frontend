@@ -880,50 +880,396 @@
       "manufacturerId": 10
     },
     {
-      "id": 112,
+      "id": 114,
       "name": "Brava",
       "manufacturerId": 10
     },
     {
-      "id": 112,
+      "id": 115,
       "name": "Bravo",
       "manufacturerId": 10
     },
     {
-      "id": 112,
+      "id": 116,
       "name": "Grande Punto",
       "manufacturerId": 10
     },
     {
-      "id": 112,
+      "id": 117,
       "name": "Panda",
       "manufacturerId": 10
     },
     {
-      "id": 112,
+      "id": 118,
       "name": "Punto",
       "manufacturerId": 10
     },
     {
-      "id": 112,
+      "id": 119,
       "name": "Stilo",
       "manufacturerId": 10
     },
     {
-      "id": 112,
+      "id": 120,
       "name": "Tipo",
       "manufacturerId": 10
     },
     {
-      "id": 112,
+      "id": 121,
       "name": "Uno",
       "manufacturerId": 10
     },
     {
-      "id": 112,
+      "id": 122,
       "name": "Spider",
       "manufacturerId": 10
+    },
+    {
+      "id": 123,
+      "name": "1007",
+      "manufacturerId": 7
+    },
+    {
+      "id": 124,
+      "name": "106",
+      "manufacturerId": 7
+    },
+    {
+      "id": 125,
+      "name": "107",
+      "manufacturerId": 7
+    },
+    {
+      "id": 126,
+      "name": "2008",
+      "manufacturerId": 7
+    },
+    {
+      "id": 127,
+      "name": "205",
+      "manufacturerId": 7
+    },
+    {
+      "id": 128,
+      "name": "206",
+      "manufacturerId": 7
+    },
+    {
+      "id": 129,
+      "name": "207",
+      "manufacturerId": 7
+    },
+    {
+      "id": 130,
+      "name": "208",
+      "manufacturerId": 7
+    },
+    {
+      "id": 131,
+      "name": "3008",
+      "manufacturerId": 7
+    },
+    {
+      "id": 132,
+      "name": "306",
+      "manufacturerId": 7
+    },
+    {
+      "id": 133,
+      "name": "307",
+      "manufacturerId": 7
+    },
+    {
+      "id": 134,
+      "name": "308",
+      "manufacturerId": 7
+    },
+    {
+      "id": 135,
+      "name": "4007",
+      "manufacturerId": 7
+    },
+    {
+      "id": 136,
+      "name": "406",
+      "manufacturerId": 7
+    },
+    {
+      "id": 137,
+      "name": "407",
+      "manufacturerId": 7
+    },
+    {
+      "id": 138,
+      "name": "5008",
+      "manufacturerId": 7
+    },
+    {
+      "id": 139,
+      "name": "508",
+      "manufacturerId": 7
+    },
+    {
+      "id": 140,
+      "name": "607",
+      "manufacturerId": 7
+    },
+    {
+      "id": 141,
+      "name": "807",
+      "manufacturerId": 7
+    },
+    {
+      "id": 142,
+      "name": "Boxer",
+      "manufacturerId": 7
+    },
+    {
+      "id": 143,
+      "name": "Expert",
+      "manufacturerId": 7
+    },
+    {
+      "id": 144,
+      "name": "Partner",
+      "manufacturerId": 7
+    },
+    {
+      "id": 145,
+      "name": "RCZ",
+      "manufacturerId": 7
+    },
+    {
+      "id": 146,
+      "name": "Rifter",
+      "manufacturerId": 7
+    },
+    {
+      "id": 132,
+      "name": "306",
+      "manufacturerId": 7
+    },
+    {
+      "id": 133,
+      "name": "Accent",
+      "manufacturerId": 11
+    },
+    {
+      "id": 134,
+      "name": "Elantra",
+      "manufacturerId": 11
+    },
+    {
+      "id": 135,
+      "name": "Galloper",
+      "manufacturerId": 11
+    },
+    {
+      "id": 136,
+      "name": "GetZ",
+      "manufacturerId": 11
+    },
+    {
+      "id": 137,
+      "name": "Grandeur",
+      "manufacturerId": 11
+    },
+    {
+      "id": 138,
+      "name": "H-1",
+      "manufacturerId": 11
+    },
+    {
+      "id": 139,
+      "name": "i10",
+      "manufacturerId": 11
+    },
+    {
+      "id": 140,
+      "name": "i20",
+      "manufacturerId": 11
+    },
+    {
+      "id": 141,
+      "name": "i30",
+      "manufacturerId": 11
+    },
+    {
+      "id": 142,
+      "name": "ix35",
+      "manufacturerId": 11
+    },
+    {
+      "id": 143,
+      "name": "Kona",
+      "manufacturerId": 11
+    },
+    {
+      "id": 144,
+      "name": "Santa Fe",
+      "manufacturerId": 11
+    },
+    {
+      "id": 145,
+      "name": "Sonata",
+      "manufacturerId": 11
+    },
+    {
+      "id": 146,
+      "name": "Terracan",
+      "manufacturerId": 11
+    },
+    {
+      "id": 147,
+      "name": "Tucson",
+      "manufacturerId": 11
+    },
+    {
+      "id": 148,
+      "name": "",
+      "manufacturerId": 12
+    },
+    {
+      "id": 149,
+      "name": "Carens",
+      "manufacturerId": 12
+    },
+    {
+      "id": 150,
+      "name": "Carnival",
+      "manufacturerId": 12
+    },
+    {
+      "id": 151,
+      "name": "Ceed",
+      "manufacturerId": 12
+    },
+    {
+      "id": 152,
+      "name": "Magentis",
+      "manufacturerId": 12
+    },
+    {
+      "id": 153,
+      "name": "Pro ceed",
+      "manufacturerId": 12
+    },
+    {
+      "id": 154,
+      "name": "Rio",
+      "manufacturerId": 12
+    },
+    {
+      "id": 155,
+      "name": "Sorento",
+      "manufacturerId": 12
+    },
+    {
+      "id": 156,
+      "name": "Sportage",
+      "manufacturerId": 12
+    },
+    {
+      "id": 157,
+      "name": "Stonic",
+      "manufacturerId": 12
+    },
+    {
+      "id": 158,
+      "name": "XCeed",
+      "manufacturerId": 12
+    },
+    {
+      "id": 159,
+      "name": "Actyon",
+      "manufacturerId": 13
+    },
+    {
+      "id": 160,
+      "name": "Korando",
+      "manufacturerId": 13
+    },
+    {
+      "id": 161,
+      "name": "Kyron",
+      "manufacturerId": 13
+    },
+    {
+      "id": 162,
+      "name": "MUSSO",
+      "manufacturerId": 13
+    },
+    {
+      "id": 163,
+      "name": "REXTON",
+      "manufacturerId": 13
+    },
+    {
+      "id": 164,
+      "name": "Rodius",
+      "manufacturerId": 13
+    },
+    {
+      "id": 165,
+      "name": "3",
+      "manufacturerId": 14
+    },
+    {
+      "id": 166,
+      "name": "323",
+      "manufacturerId": 14
+    },
+    {
+      "id": 167,
+      "name": "5",
+      "manufacturerId": 14
+    },
+    {
+      "id": 168,
+      "name": "6",
+      "manufacturerId": 14
+    },
+    {
+      "id": 169,
+      "name": "626",
+      "manufacturerId": 14
+    },
+    {
+      "id": 170,
+      "name": "CX-5",
+      "manufacturerId": 14
+    },
+    {
+      "id": 171,
+      "name": "CX-7",
+      "manufacturerId": 14
+    },
+    {
+      "id": 172,
+      "name": "MX-5",
+      "manufacturerId": 14
+    },
+    {
+      "id": 173,
+      "name": "Premacy",
+      "manufacturerId": 14
+    },
+    {
+      "id": 174,
+      "name": "RX-7",
+      "manufacturerId": 14
+    },
+    {
+      "id": 175,
+      "name": "RX-8",
+      "manufacturerId": 14
+    },
+    {
+      "id": 176,
+      "name": "Tribute",
+      "manufacturerId": 14
     }
+
   ],
   "ads": [
     {
