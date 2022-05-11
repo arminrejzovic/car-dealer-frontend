@@ -35,7 +35,7 @@ function ImageEditor(props: ImageEditorProps) {
                         return (
                             <Grid item xl={2}>
                                 <ImageUploadPreview src64={img.src64} onRemove={async () => {
-                                    await deleteImageById(props.adId);
+                                    await deleteImageById(img.id);
                                     alert("Image deleted");
                                     let temp = props.existingImages.filter((item) => item.id !== img.id);
                                     props.existingImagesMutator(temp);

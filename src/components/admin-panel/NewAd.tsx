@@ -600,12 +600,13 @@ function NewAd() {
                     variant={"filled"}
                     color={"red"}
                     onClick={async () => {
+                        await setAd({...ad, thumbnailUrl: encodedImages[0]});
                         const res = await createNewAd(ad);
                         const carId = res.id;
                         for(const img of encodedImages){
                             await uploadImage({
                                 src64: img,
-                                carId: carId
+                                adId: carId
                             });
                         }
                     }}

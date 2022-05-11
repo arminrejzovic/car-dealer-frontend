@@ -29,6 +29,7 @@ import {AdapterDateFns} from "@mui/x-date-pickers/AdapterDateFns";
 import {DatePicker} from "@mui/x-date-pickers/DatePicker";
 import ButtonRegular from "../common/ButtonRegular";
 import ImageEditor from "./ImageEditor";
+import {uploadImage} from "../../networking/ImageServices";
 
 function EditAd() {
     const { id } = useParams();
@@ -622,7 +623,13 @@ function EditAd() {
                     onClick={async () => {
                         // @ts-ignore
                         const res = await updateAd(ad, +id);
-                        console.log(res);
+                        for(const img of newImages){
+                            await uploadImage({
+                                src64: img,
+                                // @ts-ignore
+                                adId: +id
+                            });
+                        }
                     }}
                 />
             </div>

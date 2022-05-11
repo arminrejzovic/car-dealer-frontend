@@ -17,8 +17,10 @@ export async function uploadImage(img: object){
 }
 
 export async function deleteImageById(id: number){
+    console.log("Delete called with id ", id);
     const res = await fetch(`http://localhost:5000/images/${id}`, {method: "DELETE"});
     if(res.ok){
+        console.log("Image deleted")
         return res.json();
     }
     else {
