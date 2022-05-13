@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import ButtonRegular from "../common/ButtonRegular";
 import {Add} from "@mui/icons-material";
 import {ReactSearchAutocomplete} from "react-search-autocomplete";
-import {Grid} from "@mui/material";
+import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid} from "@mui/material";
 import AdBrief from "./AdBrief";
 import {fetchAllAds} from "../../networking/AdServices";
 import {AdExpanded, AdExpanded as Ad} from "../../interfaces/Interfaces";
@@ -48,17 +48,18 @@ function Oglasi() {
 
             <Grid container spacing={2}>
                 {
-                    ads.filter((ad) => {return ad.title.toLowerCase().includes(query)}).map((item) => {
+                    (ads.length>0 && ads[0].images.length>0) && ads.filter((ad) => {return ad.title.toLowerCase().includes(query)}).map((item) => {
                         return (
                             <Grid item xl={12} lg={12} md={12} sm={6} xs={12}>
                                 <AdBrief
                                     carID={item.id}
-                                    thumbnailURL={item.thumbnailUrl}
+                                    thumbnail={item.images?.at(0)?.src64 || ""}
                                     adTitle={item.title}
                                     dateCreated={item.dateCreated || ''}
                                     price={item.price}
                                     adListRef={ads}
                                     adMutator={setAds}
+                                    images={item.images}
                                 />
                             </Grid>
                         );

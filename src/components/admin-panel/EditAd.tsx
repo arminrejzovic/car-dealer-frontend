@@ -1,5 +1,5 @@
 import React, {useLayoutEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {Ad, Image, Manufacturer, Model, SimpleType} from "../../interfaces/Interfaces";
 import {fetchAdById, getDummyAd, updateAd} from "../../networking/AdServices";
 import {
@@ -9,9 +9,9 @@ import {
     fetchAllManufacturers,
     fetchAllModels
 } from "../../networking/DataServices";
-import ImageUploader from "./ImageUploader";
 import {
-    Checkbox,
+    Button,
+    Checkbox, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle,
     FormControl,
     FormControlLabel,
     FormHelperText,
@@ -37,6 +37,7 @@ function EditAd() {
 
     const [existingImages, setExistingImages] = useState<Image[]>([]);
     const [newImages, setNewImages] = useState<string[]>([]);
+    const [promptOpened, setPromptOpened] = useState(false);
 
     const [manufacturers, setManufacturers] = useState<Manufacturer[]>();
     const [models, setModels] = useState<Model[]>();
@@ -45,9 +46,7 @@ function EditAd() {
     const [driveTypes, setDriveTypes] = useState<SimpleType[]>();
 
     useLayoutEffect(() => {
-        getAd().then(() => {
-
-        });
+        getAd();
     },[]);
 
     async function getAd(){
@@ -171,7 +170,6 @@ function EditAd() {
                             value={ad!!.manufacturerId}
                             label="Proizvođač"
                             onChange={(e: SelectChangeEvent)=>{
-                                console.log(e.target.value);
                                 setAd({...ad, manufacturerId: +e.target.value});
                             }}
                         >
@@ -197,7 +195,6 @@ function EditAd() {
                             value={ad.modelId}
                             label="Model"
                             onChange={(e: SelectChangeEvent)=>{
-                                console.log(e.target.value);
                                 setAd({...ad, modelId: +e.target.value});
                             }}
                         >
@@ -317,13 +314,6 @@ function EditAd() {
                         InputProps={{
                             endAdornment: <InputAdornment position="end">KS</InputAdornment>
                         }}
-                    />
-                </Grid>
-
-                <Grid item xl={6} xs={12}>
-                    <FormControlLabel
-                        control={<Checkbox style={{color: "red"}} onChange={(e) => {setAd({...ad, availableForRent: e.target.checked})}} />}
-                        label="Dostupan za iznajmljivanje"
                     />
                 </Grid>
             </Grid>
@@ -630,9 +620,26 @@ function EditAd() {
                                 adId: +id
                             });
                         }
+                        setPromptOpened(true);
                     }}
                 />
             </div>
+
+            <Dialog
+                open={promptOpened}
+                onClose={() => {setPromptOpened(false);}}
+            >
+                <DialogTitle>Oglas uspješno kreiran</DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Uspješno ste kreirali novi oglas!
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Link style={{textDecoration: "none", display: "block"}} to={"/admin/oglasi"}>NAZAD NA OGLASE</Link>
+                    <Button onClick={() => {setPromptOpened(false)}}>OK</Button>
+                </DialogActions>
+            </Dialog>
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import {Ad} from "../interfaces/Interfaces";
 
 export async function fetchAllAds(){
-    const res = await fetch("http://localhost:5000/ads?_expand=manufacturer&_expand=model&_expand=car_type&_expand=fuel_type&_expand=drive_type");
+    const res = await fetch("http://localhost:5000/ads?_expand=manufacturer&_expand=model&_expand=car_type&_expand=fuel_type&_expand=drive_type&_embed=images");
     if(res.ok){
         return res.json();
     }
@@ -94,12 +94,10 @@ export function getDummyAd():Ad{
         fuel_typeId: 1,
         drive_typeId: 1,
         transmission: "Manuelni",
-        availableForRent: false,
         lowestPrice: 0,
-        thumbnailUrl: "",
-        firebaseFolderUrl:"",
         registrationUntil: "2023-01",
         dateCreated: `${today.getDay()}.${today.getMonth()}.${today.getFullYear()}.`,
-        images:[{id:0, src64: "", adId: 0}]
+        images:[],
+        sold: false
     };
 }

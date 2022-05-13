@@ -11,10 +11,7 @@ export interface Ad{
     "fuel_typeId": number;
     "drive_typeId": number;
     "transmission": string;
-    "availableForRent": boolean;
     "lowestPrice": number;
-    "thumbnailUrl": string;
-    "firebaseFolderUrl": string;
     "emissionStandard": string;
     "color": string;
     "parkingCamera": string;
@@ -27,6 +24,7 @@ export interface Ad{
     "description": string;
     "dateCreated": string;
     "images": Image[];
+    "sold": boolean;
 }
 
 export interface AdExpanded extends Ad{

@@ -9,9 +9,15 @@ import {
     fetchAllModels
 } from "../../networking/DataServices";
 import {
-    Checkbox,
-    FormControl, FormControlLabel,
-    FormHelperText, Grid,
+    Button,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogContentText,
+    DialogTitle,
+    FormControl,
+    FormHelperText,
+    Grid,
     InputAdornment,
     InputLabel,
     MenuItem,
@@ -26,10 +32,13 @@ import {LocalizationProvider} from "@mui/x-date-pickers";
 import {AdapterDateFns} from "@mui/x-date-pickers/AdapterDateFns";
 import ButtonRegular from "../common/ButtonRegular";
 import {uploadImage} from "../../networking/ImageServices";
+import {Link} from "react-router-dom";
 
 function NewAd() {
     const [encodedImages, setEncodedImages] = useState<any[]>([]);
     const [ad, setAd] = useState<Ad>(getDummyAd());
+    const [carId, setCarId] = useState(0);
+    const [promptOpened, setPromptOpened] = useState(false);
 
     const [manufacturers, setManufacturers] = useState<Manufacturer[]>();
     const [models, setModels] = useState<Model[]>();
@@ -73,7 +82,7 @@ function NewAd() {
                         value={ad?.title || ''}
                         className={Styles.input}
                         onChange={(e) => {
-                            setAd({...ad!!, title: e.target.value});
+                            setAd({...ad, title: e.target.value});
                         }}
                         label={"Naslov oglasa"}
                         placeholder={""}
@@ -150,7 +159,6 @@ function NewAd() {
                             value={ad!!.manufacturerId}
                             label="Proizvođač"
                             onChange={(e: SelectChangeEvent)=>{
-                                console.log(e.target.value);
                                 setAd({...ad, manufacturerId: +e.target.value});
                             }}
                         >
@@ -176,7 +184,6 @@ function NewAd() {
                             value={ad.modelId}
                             label="Model"
                             onChange={(e: SelectChangeEvent)=>{
-                                console.log(e.target.value);
                                 setAd({...ad, modelId: +e.target.value});
                             }}
                         >
@@ -296,13 +303,6 @@ function NewAd() {
                         InputProps={{
                             endAdornment: <InputAdornment position="end">KS</InputAdornment>
                         }}
-                    />
-                </Grid>
-
-                <Grid item xl={6} xs={12}>
-                    <FormControlLabel
-                        control={<Checkbox style={{color: "red"}} onChange={(e) => {setAd({...ad, availableForRent: e.target.checked})}} />}
-                        label="Dostupan za iznajmljivanje"
                     />
                 </Grid>
             </Grid>
@@ -600,18 +600,35 @@ function NewAd() {
                     variant={"filled"}
                     color={"red"}
                     onClick={async () => {
-                        await setAd({...ad, thumbnailUrl: encodedImages[0]});
                         const res = await createNewAd(ad);
-                        const carId = res.id;
+                        setCarId(res.id);
                         for(const img of encodedImages){
                             await uploadImage({
                                 src64: img,
                                 adId: carId
                             });
                         }
+                        setPromptOpened(true);
                     }}
                 />
             </div>
+
+            <Dialog
+                open={promptOpened}
+                onClose={() => {setPromptOpened(false);}}
+            >
+                <DialogTitle>Oglas uspješno kreiran</DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Uspješno ste kreirali novi oglas!
+                    </DialogContentText>
+                    <Link style={{textDecoration: "none", display: "block"}} to={`/admin/${carId}`}>Pogledaj oglas</Link>
+                    <Link style={{textDecoration: "none", display: "block"}} to={"/admin/oglasi"}>Pogledaj sve oglase</Link>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={() => {setPromptOpened(false)}}>OK</Button>
+                </DialogActions>
+            </Dialog>
         </div>
     );
 }

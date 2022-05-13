@@ -20,25 +20,6 @@ function Playground() {
 
     return (
         <div style={{padding: "2rem"}}>
-            <div>
-                <img src={ad?.thumbnailUrl} style={{height: "0rem"}}/>
-                <h1>{ad?.title}</h1>
-                <p>
-                    {ad?.lowestPrice} to {ad?.price}
-                </p>
-
-                <ButtonRegular
-                    text={"POVEĆAJ CIJENU"}
-                    variant={"filled"}
-                    color={"red"}
-                    onClick={async () => {
-                        // @ts-ignore
-                        const res = await updateAd(3, {price: ad?.price+1000});
-                        setAd(res);
-                    }}
-                />
-
-            </div>
 
             {
                 /*

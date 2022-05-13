@@ -27,13 +27,11 @@ function ImageEditor(props: ImageEditorProps) {
 
     return (
         <div>
-            <input type={"file"} accept={"image/jpeg, image/png"} multiple onChange={(e)=>{uploadImages(e)}}/>
-
             <Grid container spacing={2}>
                 {
                     props.existingImages.map((img) => {
                         return (
-                            <Grid item xl={2}>
+                            <Grid item xl={2} key={img.id}>
                                 <ImageUploadPreview src64={img.src64} onRemove={async () => {
                                     await deleteImageById(img.id);
                                     alert("Image deleted");
@@ -64,7 +62,8 @@ function ImageEditor(props: ImageEditorProps) {
                                     ref={hiddenInputRef}
                                     type={"file"}
                                     accept={"image/jpeg, image/png"}
-                                    multiple style={{display: "none"}}
+                                    multiple
+                                    style={{display: "none"}}
                                     onChange={(e) => {
                                         uploadImages(e);
                                     }}

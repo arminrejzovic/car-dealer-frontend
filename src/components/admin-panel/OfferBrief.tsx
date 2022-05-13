@@ -16,7 +16,7 @@ function OfferBrief(props: OfferBriefProps) {
         <Card className={Styles.adBrief}>
             <Grid container spacing={2}>
                 <Grid item xl={3} lg={3} md={4} sm={12} xs={12}>
-                    <img style={{height: "100%", width: "100%"}} src={props.thumbnailURL}/>
+                    <img style={{height: "100%", width: "100%"}} src={props.thumbnail}/>
                 </Grid>
 
                 <Grid item xl={4.5} lg={4.5} md={5} sm={6} xs={12}>

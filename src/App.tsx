@@ -8,7 +8,6 @@ import AdminPanel from "./components/admin-panel/AdminPanel";
 import AdminPanelLobby from "./components/admin-panel/AdminPanelLobby";
 import Oglasi from "./components/admin-panel/Oglasi";
 import NewAd from "./components/admin-panel/NewAd";
-import Oglas from "./components/admin-panel/Oglas";
 import EditAd from "./components/admin-panel/EditAd";
 import Announcements from "./components/admin-panel/Announcements";
 

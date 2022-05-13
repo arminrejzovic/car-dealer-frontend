@@ -17,10 +17,18 @@ export async function uploadImage(img: object){
 }
 
 export async function deleteImageById(id: number){
-    console.log("Delete called with id ", id);
     const res = await fetch(`http://localhost:5000/images/${id}`, {method: "DELETE"});
     if(res.ok){
-        console.log("Image deleted")
+        return res.json();
+    }
+    else {
+        return {error: "Brisanje slike nije uspjelo", status: res.status};
+    }
+}
+
+export async function getAllCarImages(id: number){
+    const res = await fetch(`http://localhost:5000/images?adId=${id}`);
+    if(res.ok){
         return res.json();
     }
     else {
