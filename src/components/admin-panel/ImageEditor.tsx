@@ -1,6 +1,6 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {Image} from "../../interfaces/Interfaces";
-import {Grid, Tooltip} from "@mui/material";
+import {Grid, Snackbar, Tooltip} from "@mui/material";
 import ImageUploadPreview from "../common/ImageUploadPreview";
 import {AddCircleOutline} from "@mui/icons-material";
 import {convertToBase64, deleteImageById} from "../../networking/ImageServices";
@@ -15,6 +15,7 @@ interface ImageEditorProps{
 
 function ImageEditor(props: ImageEditorProps) {
     const hiddenInputRef = useRef<HTMLInputElement>(null);
+    const [snackbarOpen, setSnackbarOpen] = useState(false);
 
     async function uploadImages(e: any){
         const temp = [...props.newImages];
@@ -34,7 +35,7 @@ function ImageEditor(props: ImageEditorProps) {
                             <Grid item xl={2} key={img.id}>
                                 <ImageUploadPreview src64={img.src64} onRemove={async () => {
                                     await deleteImageById(img.id);
-                                    alert("Image deleted");
+                                    setSnackbarOpen(true);
                                     let temp = props.existingImages.filter((item) => item.id !== img.id);
                                     props.existingImagesMutator(temp);
                                 }}/>
@@ -78,6 +79,14 @@ function ImageEditor(props: ImageEditorProps) {
                     }
                 </Grid>
             </Grid>
+
+            <Snackbar
+                open={snackbarOpen}
+                autoHideDuration={6000}
+                onClose={() => {setSnackbarOpen(false)}}
+                message="Slika obrisana"
+                action={undefined}
+            />
         </div>
     );
 }

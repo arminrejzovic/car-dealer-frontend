@@ -48,7 +48,7 @@ function Oglasi() {
 
             <Grid container spacing={2}>
                 {
-                    (ads.length>0 && ads[0].images.length>0) && ads.filter((ad) => {return ad.title.toLowerCase().includes(query)}).map((item) => {
+                    ads.filter((ad) => {return ad.title.toLowerCase().includes(query)}).map((item) => {
                         return (
                             <Grid item xl={12} lg={12} md={12} sm={6} xs={12}>
                                 <AdBrief
