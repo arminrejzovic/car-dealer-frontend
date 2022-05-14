@@ -1,7 +1,7 @@
-import {Ad, Announcement} from "../interfaces/Interfaces";
+import {Announcement} from "../interfaces/Interfaces";
 
 export async function fetchAllAnnouncements(){
-    const res = await fetch("http://localhost:5000/announcements");
+    const res = await fetch("http://localhost:5000/announcements?_sort=dateCreated&_order=desc");
     if(res.ok){
         return res.json();
     }

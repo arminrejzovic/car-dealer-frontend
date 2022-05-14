@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useLayoutEffect, useState} from 'react';
 import {Phone} from "@mui/icons-material";
 import Styles from "./LandingPage.module.css"
-import {Card, Container, Grid, Typography} from "@mui/material";
+import {Card, Container, Grid} from "@mui/material";
 
 import eu from "../img/icons/eu_w.svg";
 import service from "../img/icons/servis.png";
@@ -9,16 +9,36 @@ import allInclusive from "../img/icons/sveplaceno.png";
 import arrivedOnWheels from "../img/icons/tockovi.png";
 
 import scirocco from "../img/scirocco-cropped.png";
-import touran from "../img/turan.png";
 import LinkButton from "../components/common/LinkButton";
 import ReviewCard from "../components/landing-page/ReviewCard";
 import SalesForm from "../components/landing-page/SalesForm";
 import Location from "../components/landing-page/Location";
 import Footer from "../components/landing-page/Footer";
-import RentForm from "../components/landing-page/RentForm";
+import {AdExpanded, Announcement} from "../interfaces/Interfaces";
+import {fetchFeaturedAds} from "../networking/AdServices";
+import AdCard from "../components/app/AdCard";
+import {fetchAllAnnouncements} from "../networking/AnnouncementServices";
 
 
 function LandingPage() {
+    const [featuredAds, setFeaturedAds] = useState<AdExpanded[]>();
+    const [latestAnnouncements, setLatestAnnouncements] = useState<Announcement[]>();
+
+    useLayoutEffect(() => {
+        getFeaturedAds();
+        getLatestAnnouncements();
+    },[])
+
+    async function getFeaturedAds(){
+        const res = await fetchFeaturedAds();
+        setFeaturedAds(res);
+    }
+
+    async function getLatestAnnouncements(){
+        const res = await fetchAllAnnouncements();
+        setLatestAnnouncements(res);
+    }
+
     return (
         <div>
             <div className={Styles.hero}>
@@ -88,15 +108,26 @@ function LandingPage() {
                 </section>
 
                 <section style={{marginTop: "2rem", marginBottom: "2rem"}}>
-                    <h1 style={{fontSize: "2.375rem", marginBlock: "1.5rem"}}>IZNAJMLJIVANJE AUTOMOBILA</h1>
-                    <Grid container spacing={6} alignItems={"center"}>
-                        <Grid item xl={6}>
-                            <img className={Styles.sectionImage} src={touran}/>
-                        </Grid>
-
-                        <Grid item xl={6}>
-                            <RentForm/>
-                        </Grid>
+                    <h1 style={{fontSize: "2.375rem", marginBlock: "1.5rem"}}>IZDVOJENI OGLASI</h1>
+                    <Grid container spacing={2}>
+                        {
+                            featuredAds && featuredAds.map((ad) => {
+                                return (
+                                    <Grid item xl={3} lg={3} md={4} sm={6} xs={12}>
+                                        <AdCard
+                                            carID={ad.id}
+                                            thumbnailURL={ad.images[0].src64}
+                                            adTitle={ad.title}
+                                            yearBuilt={ad.year}
+                                            transmission={ad.transmission}
+                                            mileage={ad.mileage}
+                                            horsepower={ad.horsepower}
+                                            price={ad.price}
+                                        />
+                                    </Grid>
+                                )
+                            })
+                        }
                     </Grid>
                 </section>
 
@@ -129,6 +160,25 @@ function LandingPage() {
                         </Grid>
                     </Grid>
                 </section>
+
+                <div>
+                    <h1 style={{fontSize: "2.375rem", marginBlock: "1.5rem"}}>SAOPŠTENJA</h1>
+                    {
+                        latestAnnouncements?.map((announcement) => {
+                            return(
+                                <Card style={{padding: "2rem", marginBlock: "1rem"}}>
+                                    <details>
+                                        <summary>
+                                            <h2 style={{display: "inline-block", userSelect: "none"}}>{announcement.title}</h2>
+                                            <i style={{marginInlineStart: "2ch", color: "var(--light-text)"}}>{announcement.dateCreated}</i>
+                                        </summary>
+                                        <p style={{maxWidth: "75ch"}}>{announcement.text}</p>
+                                    </details>
+                                </Card>
+                            )
+                        })
+                    }
+                </div>
 
                 <section>
                     <Location/>

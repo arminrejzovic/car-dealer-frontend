@@ -20,7 +20,7 @@ function Announcements() {
     const [announcements, setAnnouncements] = useState<Announcement[]>([]);
     const [results, setResults] = useState<Announcement[]>([]);
     const [dialogOpened, setDialogOpened] = useState(false);
-    const [newAnnouncement, setNewAnnouncement] = useState({title:"", text: "", dateCreated: (new Date()).toDateString()});
+    const [newAnnouncement, setNewAnnouncement] = useState({title:"", text: "", dateCreated: (new Date()).toISOString().slice(0,10)});
     const [snackbarOpen, setSnackbarOpen] = useState(false);
 
 

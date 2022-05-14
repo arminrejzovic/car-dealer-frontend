@@ -20,6 +20,16 @@ export async function fetchAdById(id: number){
     }
 }
 
+export async function fetchFeaturedAds(){
+    const res = await fetch("http://localhost:5000/ads?_start=0&_limit=4&_expand=manufacturer&_expand=model&_expand=car_type&_expand=fuel_type&_expand=drive_type&_embed=images");
+    if(res.ok){
+        return res.json();
+    }
+    else {
+        return {error: "Pretraga nije uspjela", status: res.status};
+    }
+}
+
 export async function deleteAdById(id: number){
     const res = await fetch(`http://localhost:5000/ads/${id}`, {method: "DELETE"});
     if(res.ok){

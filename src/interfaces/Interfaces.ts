@@ -65,3 +65,31 @@ export interface Announcement{
     text: string;
     dateCreated: string;
 }
+
+export interface Filters{
+    "title"?: string;
+    "manufacturerId"?: number;
+    "modelId"?: number;
+    "price"?: number;
+    "year"?: number;
+    "mileage"?: number;
+    "volume"?: number;
+    "horsepower"?: number;
+    "car_typeId"?: number;
+    "fuel_typeId"?: number;
+    "drive_typeId"?: number;
+    "transmission"?: string;
+    "lowestPrice"?: number;
+    "emissionStandard"?: string;
+    "color"?: string;
+    "parkingCamera"?: string;
+    "rimSize"?: number;
+    "gears"?: string;
+    "lights"?: string;
+    "tyres"?: string;
+    "doors"?: string;
+    "registrationUntil"?: string;
+    "description"?: string;
+    "dateCreated"?: string;
+    "images"?: Image[];
+}
