@@ -1,21 +1,31 @@
 import React, {useEffect, useState} from 'react';
-import ButtonRegular from "../common/ButtonRegular";
 import {Add} from "@mui/icons-material";
 import {ReactSearchAutocomplete} from "react-search-autocomplete";
-import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid} from "@mui/material";
+import {Divider, Grid} from "@mui/material";
 import AdBrief from "./AdBrief";
 import {fetchAllAds} from "../../networking/AdServices";
-import {AdExpanded, AdExpanded as Ad} from "../../interfaces/Interfaces";
+import {AdExpanded} from "../../interfaces/Interfaces";
 import LinkButton from "../common/LinkButton";
+import SoldBrief from "./SoldBrief";
 
 function Oglasi() {
     const [ads, setAds] = useState<AdExpanded[]>([]);
+    const [activeAds, setActiveAds] = useState<AdExpanded[]>([]);
+    const [soldAds, setSoldAds] = useState<AdExpanded[]>([]);
 
     const [query, setQuery] = useState("");
 
     async function getAds(){
         const res = await fetchAllAds();
         setAds(res);
+        const sold = res.filter((ad: AdExpanded) => {
+            return ad.sold;
+        });
+        setSoldAds(sold);
+        const active = res.filter((ad: AdExpanded) => {
+            return !ad.sold;
+        });
+        setActiveAds(active);
     }
 
     useEffect(() => {
@@ -38,9 +48,6 @@ function Oglasi() {
                 items={[]}
                 onSearch={(keyword)=>{
                     setQuery(keyword.toLowerCase());
-                    /*setResults(ads.filter((ad) => {
-                        return ad.title.toLowerCase().includes(keyword.toLowerCase());
-                    }))*/
                 }}
                 placeholder={"Pretraži oglase"}
                 styling={{borderRadius:"0", zIndex:1000}}
@@ -48,7 +55,7 @@ function Oglasi() {
 
             <Grid container spacing={2}>
                 {
-                    ads.filter((ad) => {return ad.title.toLowerCase().includes(query)}).map((item) => {
+                    activeAds.filter((ad) => {return ad.title.toLowerCase().includes(query)}).map((item) => {
                         return (
                             <Grid item xl={12} lg={12} md={12} sm={6} xs={12}>
                                 <AdBrief
@@ -66,6 +73,30 @@ function Oglasi() {
                     })
                 }
             </Grid>
+
+            <Divider>Prodato</Divider>
+
+            <Grid container spacing={2}>
+                {
+                    soldAds.filter((ad) => {return ad.title.toLowerCase().includes(query)}).map((item) => {
+                        return (
+                            <Grid item xl={12} lg={12} md={12} sm={6} xs={12}>
+                                <SoldBrief
+                                    carID={item.id}
+                                    thumbnail={item.images?.at(0)?.src64 || ""}
+                                    adTitle={item.title}
+                                    dateCreated={item.dateCreated || ''}
+                                    price={item.price}
+                                    adListRef={ads}
+                                    adMutator={setAds}
+                                    images={item.images}
+                                />
+                            </Grid>
+                        );
+                    })
+                }
+            </Grid>
+
         </div>
     );
 }

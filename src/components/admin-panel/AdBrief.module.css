@@ -2,6 +2,12 @@
     padding: 1.5rem;
 }
 
+.soldBriefThumbnail{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    filter: grayscale(90%);
+}
+
 .adBriefThumbnail{
     aspect-ratio: 16/9;
     object-fit: cover;
