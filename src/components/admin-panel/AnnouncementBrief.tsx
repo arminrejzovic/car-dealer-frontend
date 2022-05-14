@@ -1,7 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import {Announcement} from "../../interfaces/Interfaces";
 import Styles from "./AdBrief.module.css";
-import {Card, Grid, TextField} from "@mui/material";
+import {
+    Button,
+    Card, Dialog,
+    DialogActions,
+    DialogContent,
+    DialogContentText,
+    DialogTitle,
+    Grid,
+    TextField
+} from "@mui/material";
 import LinkButton from "../common/LinkButton";
 import {DeleteForever, DoneAll, Edit} from "@mui/icons-material";
 import ButtonRegular from "../common/ButtonRegular";
@@ -16,6 +25,7 @@ interface AnnouncementBriefProps{
 function AnnouncementBrief(props: AnnouncementBriefProps) {
     const [editMode, setEditMode] = useState(false);
     const [newData, setNewData] = useState<Announcement>({id:0, title: "", text: "", dateCreated: ""});
+    const [promptOpened, setPromptOpened] = useState(false);
 
     useEffect(() => {
         setNewData({...props.announcement});
@@ -71,15 +81,38 @@ function AnnouncementBrief(props: AnnouncementBriefProps) {
                             variant={"filled"}
                             color={"red"}
                             icon={<DeleteForever/>}
-                            onClick={async () => {
-                                await deleteAnnouncementById(props.announcement.id);
-                                let temp = props.announcementListRef.filter((item) => item.id !== props.announcement.id);
-                                props.announcementMutator(temp);
+                            onClick={() => {
+                                setPromptOpened(true);
                             }}
                         />
                     </div>
                 </Grid>
             </Grid>
+
+            <Dialog
+                open={promptOpened}
+                onClose={() => {setPromptOpened(false);}}
+            >
+                <DialogTitle id="alert-dialog-title">
+                    {`Poništi saopštenje "${props.announcement.title}"?`}
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Jeste li sigurni da želite trajno obrisati navedeno saopštenje? Nakon brisanja, saopštenje je nemoguće vratiti!
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={() => {setPromptOpened(false)}}>OTKAŽI</Button>
+                    <Button
+                        onClick={ async () => {
+                            await deleteAnnouncementById(props.announcement.id);
+                            let temp = props.announcementListRef.filter((item) => item.id !== props.announcement.id);
+                            props.announcementMutator(temp);
+                        }}
+                    >PONIŠTI
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </Card>
     );
 }

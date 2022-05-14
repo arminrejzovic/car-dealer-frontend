@@ -12,9 +12,6 @@ function AdminPanelLobby() {
                 <AdminPanelCard title={"PONUDE"} linkTo={"/admin/ponude"} iconSrc={"https://img.icons8.com/external-flaticons-flat-flat-icons/128/000000/external-offers-recruitment-agency-flaticons-flat-flat-icons-2.png"}/>
             </Grid>
             <Grid item xl={4}>
-                <AdminPanelCard title={"BUKIRANJE"} linkTo={"/admin/bukiranje"} iconSrc={"https://img.icons8.com/external-flaticons-flat-flat-icons/128/000000/external-return-back-to-work-flaticons-flat-flat-icons.png"}/>
-            </Grid>
-            <Grid item xl={4}>
                 <AdminPanelCard title={"SAOPŠTENJA"} linkTo={"/admin/saopstenja"} iconSrc={"https://img.icons8.com/external-flaticons-flat-flat-icons/128/000000/external-campaign-public-relations-agency-flaticons-flat-flat-icons-2.png"}/>
             </Grid>
             <Grid item xl={4}>

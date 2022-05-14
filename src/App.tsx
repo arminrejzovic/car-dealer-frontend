@@ -24,7 +24,6 @@ function App() {
                     <Route path={"novi"} element={<NewAd/>}/>
                     <Route path={":id"} element={<EditAd/>}/>
                     <Route path={"ponude"}/>
-                    <Route path={"bukiranja"}/>
                     <Route path={"saopstenja"} element={<Announcements/>}/>
                     <Route path={"uredi_podatke"}/>
                     <Route path={"login"}/>
