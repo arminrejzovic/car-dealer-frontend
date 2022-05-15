@@ -106,7 +106,7 @@ export function getDummyAd():Ad{
         transmission: "Manuelni",
         lowestPrice: 0,
         registrationUntil: "2023-01",
-        dateCreated: `${today.getDay()}.${today.getMonth()}.${today.getFullYear()}.`,
+        dateCreated: today.toISOString().slice(0,10),
         images:[],
         sold: false
     };

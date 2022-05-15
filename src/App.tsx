@@ -25,7 +25,9 @@ function App() {
                     <Route path={":id"} element={<EditAd/>}/>
                     <Route path={"ponude"}/>
                     <Route path={"saopstenja"} element={<Announcements/>}/>
-                    <Route path={"uredi_podatke"}/>
+                    <Route path={"uredipodatke"}>
+                        <Route path={}/>
+                    </Route>
                     <Route path={"login"}/>
                 </Route>
             </Routes>

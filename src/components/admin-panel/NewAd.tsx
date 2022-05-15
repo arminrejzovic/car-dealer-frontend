@@ -601,11 +601,11 @@ function NewAd() {
                     color={"red"}
                     onClick={async () => {
                         const res = await createNewAd(ad);
-                        setCarId(res.id);
+                        await setCarId(res.id);
                         for(const img of encodedImages){
                             await uploadImage({
                                 src64: img,
-                                adId: carId
+                                adId: res.id
                             });
                         }
                         setPromptOpened(true);

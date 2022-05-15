@@ -2444,6 +2444,230 @@
         "id": 1,
         "type": "Prednji"
       }
+    },
+    {
+      "color": "Siva",
+      "description": "PLACENO SVE DO REGISTRACIJE 062 982 384 VLASNIK",
+      "doors": "4/5",
+      "emissionStandard": "Euro 6",
+      "gears": "5+R",
+      "lights": "LED",
+      "parkingCamera": "Zadnja",
+      "rimSize": 17,
+      "tyres": "Ljetne",
+      "title": "VW GOLF 7 HIGHLINE 2018",
+      "manufacturerId": 4,
+      "modelId": 47,
+      "price": 29900,
+      "year": 2018,
+      "mileage": 181000,
+      "volume": 1.6,
+      "horsepower": 115,
+      "car_typeId": 2,
+      "fuel_typeId": 2,
+      "drive_typeId": 1,
+      "transmission": "Manuelni",
+      "lowestPrice": 28000,
+      "registrationUntil": "2023-01",
+      "dateCreated": "2022-05-14",
+      "sold": false,
+      "id": 3,
+      "manufacturer": {
+        "id": 4,
+        "name": "Volkswagen",
+        "countryId": 1
+      },
+      "model": {
+        "id": 47,
+        "name": "Golf",
+        "manufacturerId": 4
+      },
+      "car_type": {
+        "id": 2,
+        "type": "Malo auto"
+      },
+      "fuel_type": {
+        "id": 2,
+        "type": "Dizel"
+      },
+      "drive_type": {
+        "id": 1,
+        "type": "Prednji"
+      }
+    },
+    {
+      "color": "Siva",
+      "description": "NA PRODAJU MERCEDES BENZ A 180 D 7 G TRONIC SPORT PAKET .LED.NAVIGACIJA.XENON.F1 ŠALTANJE..EL RETROVIZORI NA PREKLAPANJE.FABRICKI LAK.SERVISNA KNJIGA DUPLI KLJUCEVI.DOZVOLJEN SVAKI VID PROVJERE..D.O.O AUTO HASANOVIĆ ŽIVINICE 062 982 384 VLASNIK",
+      "doors": "4/5",
+      "emissionStandard": "Euro 6",
+      "gears": "7+R",
+      "lights": "LED",
+      "parkingCamera": "Zadnja",
+      "rimSize": 17,
+      "tyres": "Zimske",
+      "title": "Mercedes-Benz A 180 D SPORT PAKET 7G",
+      "manufacturerId": 3,
+      "modelId": 37,
+      "price": 33950,
+      "year": 2017,
+      "mileage": 199000,
+      "volume": 1.5,
+      "horsepower": 120,
+      "car_typeId": 2,
+      "fuel_typeId": 2,
+      "drive_typeId": 1,
+      "transmission": "Automatik",
+      "lowestPrice": 30000,
+      "registrationUntil": "2023-4",
+      "dateCreated": "2022-05-14",
+      "images": [],
+      "sold": false,
+      "id": 4
+    },
+    {
+      "color": "Plava",
+      "description": "NA PRODAJU VW PASSAT B8 R LINE. VOZILO STIGLO NA TOCKOVIMA. PLACENO SVE DO REGISTRACIJE. D.O.O AUTO HASANOVIĆ ŽIVINICE 062 982 384 VLASNIK",
+      "doors": "4/5",
+      "emissionStandard": "Euro 6",
+      "gears": "6+R",
+      "lights": "LED",
+      "parkingCamera": "Prednja i zadnja",
+      "rimSize": 17,
+      "tyres": "Zimske",
+      "title": "VW PASSAT B8 R LINE",
+      "manufacturerId": 4,
+      "modelId": 49,
+      "price": 33950,
+      "year": 2015,
+      "mileage": 247000,
+      "volume": 1.6,
+      "horsepower": 120,
+      "car_typeId": 3,
+      "fuel_typeId": 2,
+      "drive_typeId": 1,
+      "transmission": "Manuelni",
+      "lowestPrice": 30000,
+      "registrationUntil": "2023-01",
+      "dateCreated": "2022-05-15",
+      "images": [],
+      "sold": false,
+      "id": 5
+    },
+    {
+      "color": "Crna",
+      "description": "NA PRODAJU VW PASSAT B8 EURO 6.LED.XENON.BI XENON.NAVIGACIJA.START STOP.POKRETANJE VOZILA BEZ KLJUCA.FABRICKI LAK .VOZILO REDOVNO SERVISIRANO U OVLAŠTENOM VW SERVISU.DOZVOLJEN SVAKI VID PROVJERE.D.O.O AUTO HASANOVIĆ ŽIVINICE 062 982 384 VLASNIK.",
+      "doors": "4/5",
+      "emissionStandard": "Euro 6",
+      "gears": "6+R",
+      "lights": "Xenon",
+      "parkingCamera": "Zadnja",
+      "rimSize": 17,
+      "tyres": "Zimske",
+      "title": "VW PASSAT B8 LED NAVI XENON",
+      "manufacturerId": 4,
+      "modelId": 49,
+      "price": 26400,
+      "year": 2015,
+      "mileage": 189600,
+      "volume": 1.6,
+      "horsepower": 120,
+      "car_typeId": 3,
+      "fuel_typeId": 2,
+      "drive_typeId": 1,
+      "transmission": "Manuelni",
+      "lowestPrice": 24000,
+      "registrationUntil": "2023-01",
+      "dateCreated": "2022-05-15",
+      "images": [],
+      "sold": false,
+      "id": 6
+    },
+    {
+      "color": "Crvena",
+      "description": "NA PRODAJU ŠKODA OCTAVIA 1.6 TDI GREENTECH STYLE BUSINESS 2017 GODINA.LED.XENON.BI XENON.ACC.NAVIGACIJA.START STOP.PARKING SENZORI.PARK PILOT.POKRETANJE VOZILA BEZ KLJUCA GRIJANJE SJEDISTA.MF VOLAN.TEMPOMAT.EURO 6.LED AMBIJENT .FABRICKI LAK.SERVISNA KNJIGA.DUPLI KLJUCEVI.PLACENO SVE DO REGISTRACIJE.D.O.O AUTO HASANOVIĆ ŽIVINICE 062 982 384 VLASNIK",
+      "doors": "4/5",
+      "emissionStandard": "Euro 6",
+      "gears": "5+R",
+      "lights": "LED",
+      "parkingCamera": "Nema",
+      "rimSize": 17,
+      "tyres": "Zimske",
+      "title": "ŠKODA OCTAVIA 2017 GREENTECH STYLE",
+      "manufacturerId": 20,
+      "modelId": 229,
+      "price": 26400,
+      "year": 2017,
+      "mileage": 199000,
+      "volume": 1.6,
+      "horsepower": 115,
+      "car_typeId": 3,
+      "fuel_typeId": 2,
+      "drive_typeId": 1,
+      "transmission": "Manuelni",
+      "lowestPrice": 24000,
+      "registrationUntil": "2023-01",
+      "dateCreated": "2022-05-15",
+      "images": [],
+      "sold": false,
+      "id": 7
+    },
+    {
+      "color": "Siva",
+      "description": "NA PRODAJU ŠKODA OCTAVIA A7 FL  1.6 CR 85KW 115 KS EURO 6.UVEZENA I REGISTROVANA.DSG MJENJAC.F1 ŠALTANJE.VELIKA NAVIGACIJA.LED DNEVNA SVJETLA.MF VOLAN.PARKING SENZORI.PARK PILOT.START STOP. OGLAS IZ USLUGE 065 492 207 VLASNIK VOZILA",
+      "doors": "4/5",
+      "emissionStandard": "Euro 6",
+      "gears": "7+R",
+      "lights": "LED",
+      "parkingCamera": "Kamera 360",
+      "rimSize": 17,
+      "tyres": "Zimske",
+      "title": "ŠKODA OCTAVIA A7 FL",
+      "manufacturerId": 20,
+      "modelId": 229,
+      "price": 29600,
+      "year": 2017,
+      "mileage": 186000,
+      "volume": 1.6,
+      "horsepower": 115,
+      "car_typeId": 1,
+      "fuel_typeId": 2,
+      "drive_typeId": 1,
+      "transmission": "Automatik",
+      "lowestPrice": 25000,
+      "registrationUntil": "2022-4",
+      "dateCreated": "2022-05-15",
+      "images": [],
+      "sold": false,
+      "id": 8
+    },
+    {
+      "color": "Crna",
+      "description": "NA PRODAJU BMW 320 D F30 2015 GODINA EURO 6 .FULL LED.XENON.BI XENON.PARKING SENZORI.MF VOLAN.START STOP.NAVIGACIJA.KAMERA.120 KW 163 KS.DUPLI KLJUCEVI.FABRICKI LAK.VOZILO KUPLJENO OD PRVOG VLASNIKA.VOZILO REDOVNO SERVISIRANO U OVLASTENOM SERVISU.DOZVOLJEN SVAKI VID PROVJERE VOZILA. NAVEDENA CJENA ISKLJUCIVO ZA KEŠ U ZAMJENI SKUPLJI.D.O.O AUTO HASANOVIĆ MAGISTRALNI PUT ŽIVINICE",
+      "doors": "4/5",
+      "emissionStandard": "Euro 6",
+      "gears": "6+R",
+      "lights": "Xenon",
+      "parkingCamera": "Zadnja",
+      "rimSize": 16,
+      "tyres": "Ljetne",
+      "title": "BMW 320 D F30 2015 FULL",
+      "manufacturerId": 2,
+      "modelId": 18,
+      "price": 30950,
+      "year": 2015,
+      "mileage": 170000,
+      "volume": 2,
+      "horsepower": 163,
+      "car_typeId": 1,
+      "fuel_typeId": 2,
+      "drive_typeId": 1,
+      "transmission": "Manuelni",
+      "lowestPrice": 29000,
+      "registrationUntil": "2022-10",
+      "dateCreated": "2022-05-15",
+      "images": [],
+      "sold": false,
+      "id": 9
     }
   ],
   "images": [
@@ -2641,6 +2865,161 @@
       "id": 41,
       "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-627989bcbf8b0-velika.jpg",
       "adId": 2
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/04/slika-502636-626bf3b902b80-velika.jpg",
+      "adId": 3,
+      "id": 42
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/09/slika-502636-626c41087ec04-velika.jpg",
+      "adId": 3,
+      "id": 43
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/09/slika-502636-626c41357e73e-velika.jpg",
+      "adId": 3,
+      "id": 44
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/04/slika-502636-626bf378db26c-velika.jpg",
+      "adId": 3,
+      "id": 45
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-05/10/09/slika-502636-627abfab616ae-velika.jpg",
+      "adId": 3,
+      "id": 46
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/09/slika-502636-626c411fc42cb-velika.jpg",
+      "adId": 3,
+      "id": 47
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/11/08/slika-502636-625474d778f11-velika.jpg",
+      "adId": 3,
+      "id": 48
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/11/08/slika-502636-625474efd42b4-velika.jpg",
+      "adId": 3,
+      "id": 49
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/11/08/slika-502636-625474f3430aa-velika.jpg",
+      "adId": 3,
+      "id": 50
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/11/08/slika-502636-625474f5e98d6-velika.jpg",
+      "adId": 3,
+      "id": 51
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/02/slika-502636-626bda453c159-velika.jpg",
+      "adId": 3,
+      "id": 52
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/04/slika-502636-626bf293938d0-velika.jpg",
+      "adId": 3,
+      "id": 53
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/04/slika-502636-626bf32e50ab7-velika.jpg",
+      "adId": 3,
+      "id": 54
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/04/slika-502636-626bf33e3bef3-velika.jpg",
+      "adId": 3,
+      "id": 55
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/04/slika-502636-626bf3695a45a-velika.jpg",
+      "adId": 3,
+      "id": 56
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/04/slika-502636-626bf38e0142c-velika.jpg",
+      "adId": 3,
+      "id": 57
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/04/slika-502636-626bf3978a333-velika.jpg",
+      "adId": 3,
+      "id": 58
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/04/slika-502636-626bf3a855f6c-velika.jpg",
+      "adId": 3,
+      "id": 59
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/09/slika-502636-626c40f77b3ea-velika.jpg",
+      "adId": 3,
+      "id": 60
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/09/slika-502636-626c415ddd62e-velika.jpg",
+      "adId": 3,
+      "id": 61
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-05/01/12/slika-502636-626e609c0ab5b-velika.jpg",
+      "adId": 3,
+      "id": 62
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-05/01/12/slika-502636-626e60b39c545-velika.jpg",
+      "adId": 3,
+      "id": 63
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-05/01/12/slika-502636-626e60c4298d3-velika.jpg",
+      "adId": 3,
+      "id": 64
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-05/01/08/slika-502636-626ecbb69191c-velika.jpg",
+      "adId": 3,
+      "id": 65
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-05/13/08/slika-502636-627ea9b66099a-velika.jpg",
+      "adId": 3,
+      "id": 66
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/20/08/slika-502636-626051ce63efd-velika.jpg",
+      "adId": 4,
+      "id": 67
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/29/09/slika-502636-626c41e87e5eb-velika.jpg",
+      "adId": 5,
+      "id": 68
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/22/08/slika-502636-6262f18ed4751-velika.jpg",
+      "adId": 6,
+      "id": 68
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-04/24/12/slika-502636-62652d8ec6822-velika.jpg",
+      "adId": 7,
+      "id": 69
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2022-05/12/01/slika-502636-627cf2bc04f99-velika.jpg",
+      "adId": 8,
+      "id": 70
+    },
+    {
+      "src64": "https://s9.pik.ba/galerija/2021-10/21/03/slika-502636-617171f2463a1-velika.jpg",
+      "adId": 9,
+      "id": 71
     }
   ],
   "announcements": [

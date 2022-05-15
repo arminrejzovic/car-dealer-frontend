@@ -7,7 +7,6 @@ export interface ButtonProps{
     color: "red" | "green" | "blue";
     icon?: any;
     onClick?: () => any;
-    style?: any;
 }
 
 function ButtonRegular(props: ButtonProps) {
