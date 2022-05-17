@@ -14,6 +14,9 @@ import EditDataLobby from "./components/admin-panel/EditDataLobby";
 import EditManufacturers from "./components/admin-panel/edit data/EditManufacturers";
 import AdvancedSearch from "./components/app/AdvancedSearch";
 import Sales from "./components/app/Sales";
+import AppOutlet from "./components/app/AppOutlet";
+import ViewAd from "./components/app/ViewAd";
+import NotFound from "./components/common/NotFound";
 
 function App() {
   return (
@@ -21,9 +24,13 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path={"/"} element={<LandingPage/>}/>
-                <Route path={"playground"} element={<Playground/>}/>
-                <Route path={"pretraga"} element={<AdvancedSearch/>}/>
-                <Route path={"prodaja"} element={<Sales/>}/>
+                <Route path={"app"} element={<AppOutlet/>}>
+                    <Route path={"playground"} element={<Playground/>}/>
+                    <Route path={"pretraga"} element={<AdvancedSearch/>}/>
+                    <Route path={"prodaja"} element={<Sales/>}/>
+                    <Route path={"prodaja/:id"} element={<ViewAd/>}/>
+                </Route>
+
                 <Route path={"admin"} element={<AdminPanel/>}>
                     <Route index element={<AdminPanelLobby/>}/>
                     <Route path={"oglasi"} element={<Oglasi/>}/>
@@ -41,6 +48,7 @@ function App() {
                     </Route>
                     <Route path={"login"}/>
                 </Route>
+                <Route path="*" element={<NotFound/>} />
             </Routes>
         </BrowserRouter>
     </div>
