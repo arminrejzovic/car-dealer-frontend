@@ -46,7 +46,7 @@ function AnnouncementBrief(props: AnnouncementBriefProps) {
                     {
                         editMode
                             ? <TextField fullWidth multiline value={newData.text} onChange={(e) => setNewData({...newData, text: e.target.value})}/>
-                            : <p style={{maxWidth: "75ch"}}>{newData    .text}</p>
+                            : <p style={{maxWidth: "75ch"}}>{newData.text}</p>
                     }
                 </Grid>
 

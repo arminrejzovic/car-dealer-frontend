@@ -1,8 +1,12 @@
 import React from 'react';
+import {Outlet} from "react-router-dom";
 
-function EditData(props) {
+function EditData() {
     return (
-        <div></div>
+        <div>
+            Edit data
+            <Outlet/>
+        </div>
     );
 }
 

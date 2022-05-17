@@ -1,43 +1,76 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+import {
+    Checkbox,
+    FormControl,
+    InputLabel,
+    ListItemText,
+    MenuItem,
+    OutlinedInput,
+    Select,
+    SelectChangeEvent
+} from "@mui/material";
 import ButtonRegular from "../../components/common/ButtonRegular";
-import {Grid} from "@mui/material";
-import OfferBrief from "../../components/admin-panel/OfferBrief";
-import {createNewAd, fetchAdById, updateAd} from "../../networking/AdServices";
-import {AdExpanded as Ad} from "../../interfaces/Interfaces";
-
 
 function Playground() {
-    const [ad, setAd] = useState<Ad>();
 
-    useEffect(() => {
-        getAdForDemo();
-    },[])
+    const initial = [
+        {
+            id: 1,
+            name: "Audi"
+        },
+        {
+            id: 2,
+            name: "BMW"
+        },
+        {
+            id: 3,
+            name: "Mercedes"
+        },
+        {
+            id: 4,
+            name: "VW"
+        },
+        {
+            id: 5,
+            name: "Škoda"
+        },
+    ];
 
-    async function getAdForDemo(){
-        const res = await fetchAdById(3);
-        setAd(res);
-    }
+    const [manufacturers, setManufacturers] = React.useState<string[]>([]);
+
+    const handleChange = (event: SelectChangeEvent<typeof manufacturers>) => {
+        const {
+            target: { value },
+        } = event;
+        setManufacturers(
+            // On autofill we get a stringified value.
+            typeof value === 'string' ? value.split(',') : value,
+        );
+    };
 
     return (
-        <div style={{padding: "2rem"}}>
+        <div>
+            <FormControl sx={{ m: 1, width: 300 }}>
+                <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
+                <Select
+                    labelId="demo-multiple-checkbox-label"
+                    id="demo-multiple-checkbox"
+                    multiple
+                    value={manufacturers}
+                    onChange={handleChange}
+                    input={<OutlinedInput label="Tag" />}
+                    renderValue={(selected) => selected.join(', ')}
+                >
+                    {initial.map((manufacturer) => (
+                        <MenuItem key={manufacturer.id} value={manufacturer.name}>
+                            <Checkbox checked={manufacturers.indexOf(manufacturer.name) > -1} />
+                            <ListItemText primary={manufacturer.name} />
+                        </MenuItem>
+                    ))}
+                </Select>
+            </FormControl>
 
-            {
-                /*
-                false && <Grid container spacing={2} style={{padding: "1rem", marginBottom: "2rem"}}>
-                    <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-                        <OfferBrief
-                            carID={1}
-                            thumbnailURL={"https://s9.pik.ba/galerija/2021-10/21/03/slika-502636-617171f2463a1-velika.jpg"}
-                            adTitle={"BMW 320 D F30"}
-                            dateCreated={"25.08.2021."}
-                            price={29950}
-                            username={"veldin_s"}
-                            offer={28000}
-                        />
-                    </Grid>
-                </Grid>
-                 */
-            }
+            <ButtonRegular text={"SUBMIT"} variant={"filled"} color={"red"} onClick={() => console.log(manufacturers)}/>
         </div>
     );
 }

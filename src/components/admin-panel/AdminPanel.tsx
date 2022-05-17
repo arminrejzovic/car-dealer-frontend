@@ -9,9 +9,9 @@ function AdminPanel() {
             <AppBar position="sticky" style={{backgroundColor: "#FA0000"}}>
                 <Toolbar style={{display: "flex", justifyContent: "space-between"}}>
                     <Link to={"/admin"} style={{textDecoration: "none", color: "white"}}><h3>AUTO HASANOVIĆ - ADMIN PANEL</h3></Link>
-                    <div style={{display: "flex", alignItems: "center"}}>
-                        <AccountCircle fontSize={"large"}/>
+                    <div style={{display: "flex", alignItems: "center", gap: "1ch"}}>
                         <h4>admir_h</h4>
+                        <AccountCircle fontSize={"large"}/>
                     </div>
                 </Toolbar>
             </AppBar>

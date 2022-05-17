@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import ImageUploader from "./ImageUploader";
-import {Ad, Manufacturer, Model, SimpleType} from "../../interfaces/Interfaces";
+import {Ad, Manufacturer, ManufacturerExpanded, Model, SimpleType} from "../../interfaces/Interfaces";
 import {
     fetchAllCarTypes,
     fetchAllDriveTypes,
@@ -40,7 +40,7 @@ function NewAd() {
     const [carId, setCarId] = useState(0);
     const [promptOpened, setPromptOpened] = useState(false);
 
-    const [manufacturers, setManufacturers] = useState<Manufacturer[]>();
+    const [manufacturers, setManufacturers] = useState<ManufacturerExpanded[]>();
     const [models, setModels] = useState<Model[]>();
     const [carTypes, setCarTypes] = useState<SimpleType[]>();
     const [fuelTypes, setFuelTypes] = useState<SimpleType[]>();

@@ -1,5 +1,17 @@
+import {Manufacturer, ManufacturerExpanded} from "../interfaces/Interfaces";
+
 export async function fetchAllManufacturers(){
-    const res = await fetch("http://localhost:5000/manufacturers");
+    const res = await fetch("http://localhost:5000/manufacturers?_expand=country");
+    if(res.ok){
+        return res.json();
+    }
+    else {
+        return {error: "Pretraga nije uspjela", status: res.status};
+    }
+}
+
+export async function fetchManufacturersWithModels(){
+    const res = await fetch("http://localhost:5000/manufacturers?_expand=country&_embed=models");
     if(res.ok){
         return res.json();
     }
@@ -18,13 +30,62 @@ export async function fetchManufacturerById(id: number){
     }
 }
 
+export async function createNewManufacturer(manufacturer: Manufacturer){
+    const res = await fetch(`http://localhost:5000/manufacturers`,
+        {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(manufacturer)
+        }
+    );
+    if(res.ok){
+        return res.json();
+    }
+    else {
+        return {error: "Kreiranje novog proizvođača nije uspjelo", status: res.status};
+    }
+}
+
+export async function updateManufacturer(newData: Manufacturer, id: number){
+    const res = await fetch(`http://localhost:5000/manufacturers/${id}`,
+        {
+            method: "PUT",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(newData)
+        }
+    );
+
+    if(res.ok){
+        return res.json();
+    }
+    else {
+        return {error: "Ažuriranje proizvođača nije uspjelo", status: res.status};
+    }
+}
+
+export function getDummyManufacturer() : ManufacturerExpanded{
+    return{
+        id: 0,
+        name: "",
+        countryId: 1,
+        country: {
+            "id": 1,
+            "name": "Njemačka"
+        }
+    }
+}
+
 export async function fetchAllModels(){
     const res = await fetch("http://localhost:5000/models?_expand=manufacturer");
     if(res.ok){
         return res.json();
     }
     else {
-        return {error: "Pretraga nije uspjela", status: res.status};
+        return {werror: "Pretraga nije uspjela", status: res.status};
     }
 }
 
@@ -78,5 +139,13 @@ export async function fetchAllDriveTypes(){
     }
 }
 
-
+export async function fetchAllCountries(){
+    const res = await fetch("http://localhost:5000/countries");
+    if(res.ok){
+        return res.json();
+    }
+    else {
+        return {error: "Pretraga nije uspjela", status: res.status};
+    }
+}
 
