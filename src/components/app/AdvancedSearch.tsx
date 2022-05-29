@@ -27,6 +27,7 @@ import {DatePicker} from "@mui/x-date-pickers/DatePicker";
 import ButtonRegular from "../common/ButtonRegular";
 import MultiSelectObject from "../common/multiselects/MultiSelectObject";
 import MultiSelect from "../common/multiselects/MultiSelect";
+import {useNavigate} from "react-router-dom";
 
 function AdvancedSearch() {
     //Main state
@@ -64,6 +65,8 @@ function AdvancedSearch() {
     const [fuelTypes, setFuelTypes] = useState<SimpleType[]>();
     const [driveTypes, setDriveTypes] = useState<SimpleType[]>();
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         setData();
     },[]);
@@ -97,7 +100,7 @@ function AdvancedSearch() {
 
             <Grid container spacing={3}>
                 <Grid item xl={12}>
-                    <h3>2. Osnovne informacije</h3>
+                    <h3>1. Osnovne informacije</h3>
                 </Grid>
 
                 <Grid item xl={12}>
@@ -340,7 +343,7 @@ function AdvancedSearch() {
             <Grid container spacing={2}>
 
                 <Grid item xl={12}>
-                    <h3>3. Detaljne informacije</h3>
+                    <h3>2. Detaljne informacije</h3>
                 </Grid>
 
                 <Grid item xl={6} xs={12}>
@@ -551,6 +554,7 @@ function AdvancedSearch() {
                             tyres,
                             doors
                         }
+                        navigate("/app/prodaja", {state: {initialFilters: filters}});
                     }}
                 />
             </div>

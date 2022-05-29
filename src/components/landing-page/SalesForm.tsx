@@ -5,6 +5,7 @@ import {fetchAllModels} from "../../networking/DataServices";
 import Styles from "./SalesForm.module.css"
 import ButtonRegular from "../common/ButtonRegular";
 import LinkButton from "../common/LinkButton";
+import {useNavigate} from "react-router-dom";
 
 function SalesForm() {
     const [query, setQuery] = useState("");
@@ -14,6 +15,8 @@ function SalesForm() {
     const [priceUpto, setPriceUpto] = useState("");
 
     const [models, setModels] = useState<any[]>([]);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         getModels();
@@ -154,10 +157,17 @@ function SalesForm() {
             </Grid>
             <Grid container spacing={2}>
                 <Grid item xl={5} lg={5} md={5} sm={5} xs={12}>
-                    <ButtonRegular text={"PRETRAŽI"} variant={"filled"} color={"red"}/>
+                    <ButtonRegular
+                        text={"PRETRAŽI"}
+                        variant={"filled"}
+                        color={"red"}
+                        onClick={() => {
+                            navigate("/app/prodaja", {state: {initialFilters: {priceFrom, priceUpto, mileageFrom, mileageUpto}}})
+                        }}
+                    />
                 </Grid>
                 <Grid item xl={5} lg={5} md={5} sm={5} xs={12}>
-                    <LinkButton linkTo={"/pretraga"} text={"DETALJNA PRETRAGA"} variant={"outlined"} color={"red"}/>
+                    <LinkButton linkTo={"/app/pretraga"} text={"DETALJNA PRETRAGA"} variant={"outlined"} color={"red"}/>
                 </Grid>
             </Grid>
         </div>

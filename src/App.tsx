@@ -16,7 +16,10 @@ import AdvancedSearch from "./components/app/AdvancedSearch";
 import Sales from "./components/app/Sales";
 import AppOutlet from "./components/app/AppOutlet";
 import ViewAd from "./components/app/ViewAd";
+import MyAccount from "./components/app/MyAccount";
 import NotFound from "./components/common/NotFound";
+import Offers from "./components/admin-panel/Offers";
+import AdminLogin from "./components/admin-panel/AdminLogin";
 
 function App() {
   return (
@@ -29,6 +32,7 @@ function App() {
                     <Route path={"pretraga"} element={<AdvancedSearch/>}/>
                     <Route path={"prodaja"} element={<Sales/>}/>
                     <Route path={"prodaja/:id"} element={<ViewAd/>}/>
+                    <Route path={"mojprofil"} element={<MyAccount/>}/>
                 </Route>
 
                 <Route path={"admin"} element={<AdminPanel/>}>
@@ -36,7 +40,7 @@ function App() {
                     <Route path={"oglasi"} element={<Oglasi/>}/>
                     <Route path={"novi"} element={<NewAd/>}/>
                     <Route path={":id"} element={<EditAd/>}/>
-                    <Route path={"ponude"}/>
+                    <Route path={"ponude"} element={<Offers/>}/>
                     <Route path={"saopstenja"} element={<Announcements/>}/>
                     <Route path={"uredipodatke"}>
                         <Route index element={<EditDataLobby/>}/>
@@ -46,8 +50,8 @@ function App() {
                         <Route path={"goriva"}/>
                         <Route path={"tipovi"}/>
                     </Route>
-                    <Route path={"login"}/>
                 </Route>
+                <Route path={"login"} element={<AdminLogin/>}/>
                 <Route path="*" element={<NotFound/>} />
             </Routes>
         </BrowserRouter>

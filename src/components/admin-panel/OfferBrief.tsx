@@ -5,10 +5,16 @@ import Styles from "./AdBrief.module.css";
 import LinkButton from "../common/LinkButton";
 import {AccountCircle, DeleteForever, DoneAll, Edit} from "@mui/icons-material";
 import ButtonRegular from "../common/ButtonRegular";
+import {Offer, OfferExpanded, updateOffer} from "../../networking/OfferServices";
+import {updateAd} from "../../networking/AdServices";
 
-interface OfferBriefProps extends AdBriefProps{
-    username: string;
-    offer: number;
+interface OfferBriefProps {
+    thumbnail: string;
+    adTitle: string;
+    adPrice: number;
+    offer: OfferExpanded;
+    setter: Function;
+    offersList: OfferExpanded[];
 }
 
 function OfferBrief(props: OfferBriefProps) {
@@ -23,10 +29,9 @@ function OfferBrief(props: OfferBriefProps) {
                     <div style={{display: "flex", height:"100%", flexDirection:"column", justifyContent: "space-between"}}>
                         <div>
                             <h3>{props.adTitle}</h3>
-                            <h4 style={{color: "var(--light-text)", fontWeight: "normal"}}>{props.dateCreated}</h4>
                         </div>
                         <div>
-                            <h3>{props.price} KM</h3>
+                            <h3>{props.adPrice} KM</h3>
                         </div>
                     </div>
                 </Grid>
@@ -36,13 +41,34 @@ function OfferBrief(props: OfferBriefProps) {
                         <div>
                             <div style={{display:"flex", alignItems: "center"}}>
                                 <AccountCircle fontSize={"large"}/>
-                                <h3>{props.username}</h3>
+                                <h3>{props.offer.username}</h3>
                             </div>
-                            <h3>Ponuda - <span style={{color: "var(--light-red)"}}>{props.offer}</span> KM</h3>
+                            <h3>Ponuda: <span style={{color: "var(--light-red)"}}>{props.offer.offer}</span> KM</h3>
+                            <p>Poruka: {props.offer.message}</p>
                         </div>
                         <div style={{display:"flex", gap: "1rem"}}>
-                            <ButtonRegular text={"PRIHVATI"} variant={"filled"} color={"green"} icon={<DoneAll/>}/>
-                            <ButtonRegular text={"ODBIJ"} variant={"filled"} color={"red"} icon={<DeleteForever/>}/>
+                            <ButtonRegular
+                                text={"PRIHVATI"}
+                                variant={"filled"}
+                                color={"green"}
+                                icon={<DoneAll/>}
+                                onClick={async () => {
+                                    await updateOffer({...props.offer, response: "accepted"}, props.offer.id);
+                                    alert("Ponuda prihvaćena");
+                                    props.setter(props.offersList.filter((item) => {return item.id !== props.offer.id}));
+                                }}
+                            />
+                            <ButtonRegular
+                                text={"ODBIJ"}
+                                variant={"filled"}
+                                color={"red"}
+                                icon={<DeleteForever/>}
+                                onClick={async () => {
+                                    await updateOffer({...props.offer, response: "rejected"}, props.offer.id);
+                                    alert("Ponuda odbijena");
+                                    props.setter(props.offersList.filter((item) => {return item.id !== props.offer.id}));
+                                }}
+                            />
                         </div>
                     </div>
                 </Grid>

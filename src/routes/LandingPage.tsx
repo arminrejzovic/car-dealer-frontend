@@ -7,18 +7,17 @@ import eu from "../img/icons/eu_w.svg";
 import service from "../img/icons/servis.png";
 import allInclusive from "../img/icons/sveplaceno.png";
 import arrivedOnWheels from "../img/icons/tockovi.png";
-
 import scirocco from "../img/scirocco-cropped.png";
+
 import LinkButton from "../components/common/LinkButton";
 import ReviewCard from "../components/landing-page/ReviewCard";
 import SalesForm from "../components/landing-page/SalesForm";
 import Location from "../components/landing-page/Location";
 import Footer from "../components/landing-page/Footer";
-import {AdExpanded, Announcement} from "../interfaces/Interfaces";
-import {fetchFeaturedAds} from "../networking/AdServices";
 import AdCard from "../components/app/AdCard";
+import {AdExpanded, Announcement} from "../interfaces/Interfaces";
 import {fetchAllAnnouncements} from "../networking/AnnouncementServices";
-
+import {fetchFeaturedAds} from "../networking/AdServices";
 
 function LandingPage() {
     const [featuredAds, setFeaturedAds] = useState<AdExpanded[]>();
@@ -47,17 +46,19 @@ function LandingPage() {
                         <h2 style={{fontSize: "2rem"}}><span style={{color: "#FA0000"}}>AUTO</span> HASANOVIĆ</h2>
                         <div style={{display: "flex", alignItems: "center"}}>
                             <Phone fontSize={"large"}/>
-                            <div>
+                            <a href={"tel:061123456"} style={{color: "white", textDecoration: "none"}}>
                                 <h4 style={{fontSize: "1rem"}}>Pozovite nas na</h4>
-                                <h4 style={{fontSize: "1rem"}}>+387 61 123 456</h4>
-                            </div>
+                                <h4 style={{fontSize: "1rem"}}>
+                                    +387 61 123 456
+                                </h4>
+                            </a>
                         </div>
                     </header>
 
                     <div style={{maxWidth:"60ch", marginTop: "2rem"}}>
                         <h1 style={{marginBottom: "2rem", fontSize: "3rem"}}>NAJPOVOLJNIJI EUROPSKI POLOVNJACI</h1>
                         <p style={{marginBottom: "2rem"}}>S vama od 2019. godine, Auto Hasanović je uspješna firma koja se bavi uvozom prodajom i iznajmljivanjem automobila. Naša vozila uvozimo iz Holandije, uz posebnu pažnju na kvalitet. Sva naša vozila u BiH stižu na točkovima i za svako su plaćene sve dadžbine do registracije. Vozila pregledamo u ovlaštenom servisu prije prodaje. Garantujemo Vam kvalitetno i pouzdano vozilo!</p>
-                        <LinkButton linkTo={"/prodaja"} text={"POGLEDAJ PONUDU"} variant={"filled"} color={"red"}/>
+                        <LinkButton linkTo={"/app/prodaja"} text={"POGLEDAJ PONUDU"} variant={"filled"} color={"red"}/>
                     </div>
                 </div>
             </div>
@@ -179,7 +180,6 @@ function LandingPage() {
                         })
                     }
                 </div>
-
                 <section>
                     <Location/>
                 </section>

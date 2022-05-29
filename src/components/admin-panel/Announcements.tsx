@@ -1,15 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Announcement} from "../../interfaces/Interfaces";
-import {
-    Button,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogContentText,
-    DialogTitle,
-    Grid, Snackbar,
-    TextField
-} from "@mui/material";
+import {Button, Dialog, DialogActions, DialogContent, DialogTitle, Grid, Snackbar, TextField} from "@mui/material";
 import ButtonRegular from "../common/ButtonRegular";
 import {Add} from "@mui/icons-material";
 import {ReactSearchAutocomplete} from "react-search-autocomplete";
@@ -19,6 +10,7 @@ import AnnouncementBrief from "./AnnouncementBrief";
 function Announcements() {
     const [announcements, setAnnouncements] = useState<Announcement[]>([]);
     const [results, setResults] = useState<Announcement[]>([]);
+    const [query, setQuery] = useState("");
     const [dialogOpened, setDialogOpened] = useState(false);
     const [newAnnouncement, setNewAnnouncement] = useState({title:"", text: "", dateCreated: (new Date()).toISOString().slice(0,10)});
     const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -33,6 +25,14 @@ function Announcements() {
     useEffect(() => {
         getAnnouncements();
     }, []);
+
+    useEffect(() => {
+        setResults(announcements.filter((announcement) => {
+            const title = announcement.title.toLowerCase();
+            const text = announcement.text.toLowerCase();
+            return (title.includes(query) || text.includes(query));
+        }))
+    }, [announcements])
 
     return (
         <div style={{padding: "3rem", display: "grid", gap: "3rem"}}>
@@ -49,12 +49,7 @@ function Announcements() {
             <ReactSearchAutocomplete
                 items={[]}
                 onSearch={(keyword)=>{
-                    setResults(announcements.filter((announcement) => {
-                        const title = announcement.title.toLowerCase();
-                        const text = announcement.text.toLowerCase();
-                        const keywordLowercase = keyword.toLowerCase();
-                        return (title.includes(keywordLowercase) || text.includes(keywordLowercase));
-                    }))
+                    setQuery(keyword.toLowerCase);
                 }}
                 onHover={()=>{}}
                 onSelect={()=>{}}
@@ -72,7 +67,7 @@ function Announcements() {
                                 <AnnouncementBrief
                                     announcement={item}
                                     announcementListRef={announcements}
-                                    announcementMutator={setResults}
+                                    announcementMutator={setAnnouncements}
                                 />
                             </Grid>
                         );
@@ -113,6 +108,7 @@ function Announcements() {
                             const na = announcements;
                             na.push(res);
                             setAnnouncements(na);
+                            setResults(na);
                             setDialogOpened(false);
                             setSnackbarOpen(true);
                         }}
@@ -123,7 +119,7 @@ function Announcements() {
 
             <Snackbar
                 open={snackbarOpen}
-                autoHideDuration={6000}
+                autoHideDuration={3000}
                 onClose={() => {setSnackbarOpen(false)}}
                 message="Novo saopštenje kreirano"
                 action={undefined}

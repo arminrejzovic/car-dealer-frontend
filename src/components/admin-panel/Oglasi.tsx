@@ -64,8 +64,8 @@ function Oglasi() {
                                     adTitle={item.title}
                                     dateCreated={item.dateCreated || ''}
                                     price={item.price}
-                                    adListRef={ads}
-                                    adMutator={setAds}
+                                    adListRef={activeAds}
+                                    adMutator={setActiveAds}
                                     images={item.images}
                                 />
                             </Grid>
@@ -87,8 +87,8 @@ function Oglasi() {
                                     adTitle={item.title}
                                     dateCreated={item.dateCreated || ''}
                                     price={item.price}
-                                    adListRef={ads}
-                                    adMutator={setAds}
+                                    adListRef={soldAds}
+                                    adMutator={setSoldAds}
                                     images={item.images}
                                 />
                             </Grid>

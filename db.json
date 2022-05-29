@@ -153,6 +153,11 @@
   ],
   "manufacturers": [
     {
+      "id": 999,
+      "name": "SVI",
+      "countryId": 1
+    },
+    {
       "id": 1,
       "name": "Audi",
       "countryId": 1
@@ -3708,18 +3713,846 @@
       "title": "Bajram Šerif Mubarek Olsun",
       "text": "Bajram Šerif Mubarek Olsun želi vam vaš Auto Hasanović! Povodom obilježavanja Bajrama, naša poslovnica neće raditi 2. i 3. maja (ponedjeljak i utorak). Od 4. maja nastavljamo po uobičajenom radnom vremenu.",
       "dateCreated": "2022-04-30"
+    }
+  ],
+  "offers": [
+    {
+      "username": "armin_r",
+      "offer": 36000,
+      "adId": 1,
+      "message": "Merhaba",
+      "response": "accepted",
+      "id": 1,
+      "ad": {
+        "color": "Crna",
+        "description": "NA PRODAJU VW PASSAT B8 R LINE VIRTUAL COCKPIT .PANORAMA KROV.KAMERA.XENON.BI XENON.LED.NAVIGACIJA.TEMPOMAT.START STOP.POKRETANJE VOZILA BEZ KLJUCA.GRIJANJE SJEDISTA.LED AMBIJENT .FULL SERVISNA ISTORIJA I VW .VOZILO REDOVNO SERVISIRANO.FABRICKI LAK.EURO 6 .NAVEDENA CJENA ISKLJUCIVO ZA KEŠ .D.O.O AUTO HASANOVIC  ŽIVINICE 062 982 384 VLASNIK",
+        "doors": "4/5",
+        "emissionStandard": "Euro 6",
+        "gears": "6+R",
+        "lights": "Xenon",
+        "parkingCamera": "Zadnja",
+        "rimSize": 17,
+        "tyres": "Zimske",
+        "title": "VW PASSAT B8 R LINE VIRTUAL COCKPIT",
+        "manufacturerId": 4,
+        "modelId": 49,
+        "price": 36950,
+        "year": 2016,
+        "mileage": 177000,
+        "volume": 1.6,
+        "horsepower": 120,
+        "car_typeId": 1,
+        "fuel_typeId": 2,
+        "drive_typeId": 1,
+        "transmission": "Manuelni",
+        "lowestPrice": 35000,
+        "registrationUntil": "2023-01",
+        "dateCreated": "5.4.2022.",
+        "images": [
+          {
+            "id": 2,
+            "src64": "https://s9.pik.ba/galerija/2022-05/11/06/slika-502636-627be6d89b1b1-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 3,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-62798c4622515-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 4,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940d7abf36-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 5,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-62798c976ae84-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 6,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-62793a834b809-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 7,
+            "src64": "https://s9.pik.ba/galerija/2022-04/27/12/slika-502636-62686ed6ef652-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 8,
+            "src64": "https://s9.pik.ba/galerija/2022-04/27/12/slika-502636-62686ec5ee5c3-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 9,
+            "src64": "https://s9.pik.ba/galerija/2022-04/27/12/slika-502636-62686efb6ab35-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 10,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-6279399cdbc82-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 11,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627939d9adba6-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 12,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-62793a252a53e-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 13,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940980424e-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 14,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940b16d265-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 15,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940bf94e74-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 16,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940f18273c-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 17,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627941035febe-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 18,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627941ab6d58a-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 19,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-62798ccb547a9-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 20,
+            "src64": "https://s9.pik.ba/galerija/2022-05/11/06/slika-502636-627be728ca58a-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 21,
+            "src64": "https://s9.pik.ba/galerija/2022-05/11/06/slika-502636-627be76126731-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 22,
+            "src64": "https://s9.pik.ba/galerija/2022-05/12/07/slika-502636-627d42787e2ec-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 23,
+            "src64": "https://s9.pik.ba/galerija/2022-05/13/03/slika-502636-627e589821a5b-velika.jpg",
+            "adId": 1
+          }
+        ],
+        "sold": false,
+        "id": 1,
+        "manufacturer": {
+          "id": 4,
+          "name": "Volkswagen",
+          "countryId": 1
+        },
+        "model": {
+          "id": 49,
+          "name": "Passat",
+          "manufacturerId": 4
+        },
+        "car_type": {
+          "id": 1,
+          "type": "Limuzina"
+        },
+        "fuel_type": {
+          "id": 2,
+          "type": "Dizel"
+        },
+        "drive_type": {
+          "id": 1,
+          "type": "Prednji"
+        }
+      }
     },
     {
-      "title": "Samir Suljanović Pobjegao",
-      "text": "Samir Suljanović je ukro Škoda Fabiu i pobjego u nepoznatom pravcu.",
-      "dateCreated": "2022-05-14",
-      "id": 5
+      "username": "safet_h",
+      "offer": 19500,
+      "adId": 2,
+      "message": "Zamjena za artikl na linku \nhttps://www.olx.ba/artikal/47676250/audi-tt-2-0-tfsi/",
+      "response": "accepted",
+      "id": 2,
+      "ad": {
+        "color": "Siva",
+        "description": "NA PRODAJU VW GOLF 7 1.6 81KW CR BLUEMOTION EURO 6 .KAMERA .NAVIGACIJA.MF VOLAN.LED AMBIJENT.TEMPOMAT.PARKING SENZORI .PARK PILOT.START STOP GRIJANJE SJEDISTA.ABS.ESP.KLIMA .4 X EL PODIZACI.DUPLI KLJUCEVI.FABRICKI LAK.VOZILO REDOVNO SERVISIRANO U OVLASTENOM SERVISU.PLACENO SVE DO REGISTRACIJE.DOZVOLJEN SVAKI VID PROVJERE.D.O.O AUTO HASANOVIĆ ŽIVINICE 062 982 384 VLASNIK",
+        "doors": "4/5",
+        "emissionStandard": "Euro 6",
+        "gears": "5+R",
+        "lights": "Xenon",
+        "parkingCamera": "Zadnja",
+        "rimSize": 17,
+        "tyres": "Zimske",
+        "title": "VW GOLF 7 2016 81KW HIGHLINE",
+        "manufacturerId": 4,
+        "modelId": 47,
+        "price": 20750,
+        "year": 2016,
+        "mileage": 221000,
+        "volume": 1.6,
+        "horsepower": 110,
+        "car_typeId": 3,
+        "fuel_typeId": 2,
+        "drive_typeId": 1,
+        "transmission": "Manuelni",
+        "lowestPrice": 19000,
+        "registrationUntil": "2023-01",
+        "dateCreated": "5.4.2022.",
+        "images": [
+          {
+            "id": 24,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932888752e-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 25,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627933974b8fb-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 26,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932afca4ab-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 27,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/01/slika-502636-6278fe39ba33e-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 28,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932a03958c-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 29,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932c1eca02-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 30,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932cf3f1e8-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 31,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932d9d8626-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 32,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932e945089-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 33,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932fc28747-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 34,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-6279330aa41af-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 35,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-6279332b3a2f2-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 36,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627933469af48-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 37,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-6279336255ed4-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 38,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-62798272bf368-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 39,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-6279827cdbe74-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 40,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-627989821afaa-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 41,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-627989bcbf8b0-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 42,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-627989ec29341-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 43,
+            "src64": "https://s9.pik.ba/galerija/2022-05/13/06/slika-502636-627e83983a95e-velika.jpg",
+            "adId": 2
+          }
+        ],
+        "sold": false,
+        "id": 2,
+        "manufacturer": {
+          "id": 4,
+          "name": "Volkswagen",
+          "countryId": 1
+        },
+        "model": {
+          "id": 47,
+          "name": "Golf",
+          "manufacturerId": 4
+        },
+        "car_type": {
+          "id": 3,
+          "type": "Karavan"
+        },
+        "fuel_type": {
+          "id": 2,
+          "type": "Dizel"
+        },
+        "drive_type": {
+          "id": 1,
+          "type": "Prednji"
+        }
+      }
     },
     {
-      "title": "Telix doo Tuzla - novi partner Auto Hasanović",
-      "text": "Klima centar Telix je naš novi partner!",
-      "dateCreated": "2022-05-14",
-      "id": 6
+      "username": "faruk_b",
+      "offer": 20000,
+      "adId": 2,
+      "message": "Keš",
+      "response": "accepted",
+      "id": 3,
+      "ad": {
+        "color": "Siva",
+        "description": "NA PRODAJU VW GOLF 7 1.6 81KW CR BLUEMOTION EURO 6 .KAMERA .NAVIGACIJA.MF VOLAN.LED AMBIJENT.TEMPOMAT.PARKING SENZORI .PARK PILOT.START STOP GRIJANJE SJEDISTA.ABS.ESP.KLIMA .4 X EL PODIZACI.DUPLI KLJUCEVI.FABRICKI LAK.VOZILO REDOVNO SERVISIRANO U OVLASTENOM SERVISU.PLACENO SVE DO REGISTRACIJE.DOZVOLJEN SVAKI VID PROVJERE.D.O.O AUTO HASANOVIĆ ŽIVINICE 062 982 384 VLASNIK",
+        "doors": "4/5",
+        "emissionStandard": "Euro 6",
+        "gears": "5+R",
+        "lights": "Xenon",
+        "parkingCamera": "Zadnja",
+        "rimSize": 17,
+        "tyres": "Zimske",
+        "title": "VW GOLF 7 2016 81KW HIGHLINE",
+        "manufacturerId": 4,
+        "modelId": 47,
+        "price": 20750,
+        "year": 2016,
+        "mileage": 221000,
+        "volume": 1.6,
+        "horsepower": 110,
+        "car_typeId": 3,
+        "fuel_typeId": 2,
+        "drive_typeId": 1,
+        "transmission": "Manuelni",
+        "lowestPrice": 19000,
+        "registrationUntil": "2023-01",
+        "dateCreated": "5.4.2022.",
+        "images": [
+          {
+            "id": 24,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932888752e-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 25,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627933974b8fb-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 26,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932afca4ab-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 27,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/01/slika-502636-6278fe39ba33e-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 28,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932a03958c-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 29,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932c1eca02-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 30,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932cf3f1e8-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 31,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932d9d8626-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 32,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932e945089-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 33,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627932fc28747-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 34,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-6279330aa41af-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 35,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-6279332b3a2f2-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 36,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627933469af48-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 37,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-6279336255ed4-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 38,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-62798272bf368-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 39,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-6279827cdbe74-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 40,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-627989821afaa-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 41,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-627989bcbf8b0-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 42,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-627989ec29341-velika.jpg",
+            "adId": 2
+          },
+          {
+            "id": 43,
+            "src64": "https://s9.pik.ba/galerija/2022-05/13/06/slika-502636-627e83983a95e-velika.jpg",
+            "adId": 2
+          }
+        ],
+        "sold": false,
+        "id": 2,
+        "manufacturer": {
+          "id": 4,
+          "name": "Volkswagen",
+          "countryId": 1
+        },
+        "model": {
+          "id": 47,
+          "name": "Golf",
+          "manufacturerId": 4
+        },
+        "car_type": {
+          "id": 3,
+          "type": "Karavan"
+        },
+        "fuel_type": {
+          "id": 2,
+          "type": "Dizel"
+        },
+        "drive_type": {
+          "id": 1,
+          "type": "Prednji"
+        }
+      }
+    },
+    {
+      "username": "armin_r",
+      "offer": 20000,
+      "adId": 2,
+      "message": "Zadnja ponuda, keš",
+      "response": "pending",
+      "id": 4
+    },
+    {
+      "username": "armin_r",
+      "offer": 35000,
+      "adId": 1,
+      "message": "Message",
+      "response": "rejected",
+      "id": 5,
+      "ad": {
+        "color": "Crna",
+        "description": "NA PRODAJU VW PASSAT B8 R LINE VIRTUAL COCKPIT .PANORAMA KROV.KAMERA.XENON.BI XENON.LED.NAVIGACIJA.TEMPOMAT.START STOP.POKRETANJE VOZILA BEZ KLJUCA.GRIJANJE SJEDISTA.LED AMBIJENT .FULL SERVISNA ISTORIJA I VW .VOZILO REDOVNO SERVISIRANO.FABRICKI LAK.EURO 6 .NAVEDENA CJENA ISKLJUCIVO ZA KEŠ .D.O.O AUTO HASANOVIC  ŽIVINICE 062 982 384 VLASNIK",
+        "doors": "4/5",
+        "emissionStandard": "Euro 6",
+        "gears": "6+R",
+        "lights": "Xenon",
+        "parkingCamera": "Zadnja",
+        "rimSize": 17,
+        "tyres": "Zimske",
+        "title": "VW PASSAT B8 R LINE VIRTUAL COCKPIT",
+        "manufacturerId": 4,
+        "modelId": 49,
+        "price": 36950,
+        "year": 2016,
+        "mileage": 177000,
+        "volume": 1.6,
+        "horsepower": 120,
+        "car_typeId": 1,
+        "fuel_typeId": 2,
+        "drive_typeId": 1,
+        "transmission": "Manuelni",
+        "lowestPrice": 35000,
+        "registrationUntil": "2023-01",
+        "dateCreated": "5.4.2022.",
+        "images": [
+          {
+            "id": 2,
+            "src64": "https://s9.pik.ba/galerija/2022-05/11/06/slika-502636-627be6d89b1b1-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 3,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-62798c4622515-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 4,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940d7abf36-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 5,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-62798c976ae84-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 6,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-62793a834b809-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 7,
+            "src64": "https://s9.pik.ba/galerija/2022-04/27/12/slika-502636-62686ed6ef652-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 8,
+            "src64": "https://s9.pik.ba/galerija/2022-04/27/12/slika-502636-62686ec5ee5c3-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 9,
+            "src64": "https://s9.pik.ba/galerija/2022-04/27/12/slika-502636-62686efb6ab35-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 10,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-6279399cdbc82-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 11,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627939d9adba6-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 12,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-62793a252a53e-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 13,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940980424e-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 14,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940b16d265-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 15,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940bf94e74-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 16,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940f18273c-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 17,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627941035febe-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 18,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627941ab6d58a-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 19,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-62798ccb547a9-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 20,
+            "src64": "https://s9.pik.ba/galerija/2022-05/11/06/slika-502636-627be728ca58a-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 21,
+            "src64": "https://s9.pik.ba/galerija/2022-05/11/06/slika-502636-627be76126731-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 22,
+            "src64": "https://s9.pik.ba/galerija/2022-05/12/07/slika-502636-627d42787e2ec-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 23,
+            "src64": "https://s9.pik.ba/galerija/2022-05/13/03/slika-502636-627e589821a5b-velika.jpg",
+            "adId": 1
+          }
+        ],
+        "sold": false,
+        "id": 1,
+        "manufacturer": {
+          "id": 4,
+          "name": "Volkswagen",
+          "countryId": 1
+        },
+        "model": {
+          "id": 49,
+          "name": "Passat",
+          "manufacturerId": 4
+        },
+        "car_type": {
+          "id": 1,
+          "type": "Limuzina"
+        },
+        "fuel_type": {
+          "id": 2,
+          "type": "Dizel"
+        },
+        "drive_type": {
+          "id": 1,
+          "type": "Prednji"
+        }
+      }
+    },
+    {
+      "username": "armin_r",
+      "offer": 35100,
+      "adId": 1,
+      "message": "",
+      "response": "rejected",
+      "id": 6,
+      "ad": {
+        "color": "Crna",
+        "description": "NA PRODAJU VW PASSAT B8 R LINE VIRTUAL COCKPIT .PANORAMA KROV.KAMERA.XENON.BI XENON.LED.NAVIGACIJA.TEMPOMAT.START STOP.POKRETANJE VOZILA BEZ KLJUCA.GRIJANJE SJEDISTA.LED AMBIJENT .FULL SERVISNA ISTORIJA I VW .VOZILO REDOVNO SERVISIRANO.FABRICKI LAK.EURO 6 .NAVEDENA CJENA ISKLJUCIVO ZA KEŠ .D.O.O AUTO HASANOVIC  ŽIVINICE 062 982 384 VLASNIK",
+        "doors": "4/5",
+        "emissionStandard": "Euro 6",
+        "gears": "6+R",
+        "lights": "Xenon",
+        "parkingCamera": "Zadnja",
+        "rimSize": 17,
+        "tyres": "Zimske",
+        "title": "VW PASSAT B8 R LINE VIRTUAL COCKPIT",
+        "manufacturerId": 4,
+        "modelId": 49,
+        "price": 36950,
+        "year": 2016,
+        "mileage": 177000,
+        "volume": 1.6,
+        "horsepower": 120,
+        "car_typeId": 1,
+        "fuel_typeId": 2,
+        "drive_typeId": 1,
+        "transmission": "Manuelni",
+        "lowestPrice": 35000,
+        "registrationUntil": "2023-01",
+        "dateCreated": "5.4.2022.",
+        "images": [
+          {
+            "id": 2,
+            "src64": "https://s9.pik.ba/galerija/2022-05/11/06/slika-502636-627be6d89b1b1-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 3,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-62798c4622515-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 4,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940d7abf36-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 5,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-62798c976ae84-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 6,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-62793a834b809-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 7,
+            "src64": "https://s9.pik.ba/galerija/2022-04/27/12/slika-502636-62686ed6ef652-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 8,
+            "src64": "https://s9.pik.ba/galerija/2022-04/27/12/slika-502636-62686ec5ee5c3-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 9,
+            "src64": "https://s9.pik.ba/galerija/2022-04/27/12/slika-502636-62686efb6ab35-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 10,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-6279399cdbc82-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 11,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-627939d9adba6-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 12,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/05/slika-502636-62793a252a53e-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 13,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940980424e-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 14,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940b16d265-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 15,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940bf94e74-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 16,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627940f18273c-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 17,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627941035febe-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 18,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/06/slika-502636-627941ab6d58a-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 19,
+            "src64": "https://s9.pik.ba/galerija/2022-05/09/11/slika-502636-62798ccb547a9-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 20,
+            "src64": "https://s9.pik.ba/galerija/2022-05/11/06/slika-502636-627be728ca58a-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 21,
+            "src64": "https://s9.pik.ba/galerija/2022-05/11/06/slika-502636-627be76126731-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 22,
+            "src64": "https://s9.pik.ba/galerija/2022-05/12/07/slika-502636-627d42787e2ec-velika.jpg",
+            "adId": 1
+          },
+          {
+            "id": 23,
+            "src64": "https://s9.pik.ba/galerija/2022-05/13/03/slika-502636-627e589821a5b-velika.jpg",
+            "adId": 1
+          }
+        ],
+        "sold": false,
+        "id": 1,
+        "manufacturer": {
+          "id": 4,
+          "name": "Volkswagen",
+          "countryId": 1
+        },
+        "model": {
+          "id": 49,
+          "name": "Passat",
+          "manufacturerId": 4
+        },
+        "car_type": {
+          "id": 1,
+          "type": "Limuzina"
+        },
+        "fuel_type": {
+          "id": 2,
+          "type": "Dizel"
+        },
+        "drive_type": {
+          "id": 1,
+          "type": "Prednji"
+        }
+      }
     }
   ]
 }

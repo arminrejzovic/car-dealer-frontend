@@ -1,23 +1,22 @@
-import React, {useState} from 'react';
-import {Grid} from "@mui/material";
+import React, {useLayoutEffect, useState} from 'react';
+import {Button, Dialog, DialogActions, DialogContent, Grid} from "@mui/material";
 import Styles from "./Gallery.module.css"
+import {Image} from "../../interfaces/Interfaces";
 
-function Gallery() {
+interface GalleryProps{
+    images: Image[];
+}
+
+function Gallery(props: GalleryProps) {
     const [index, setIndex] = useState(0);
-    const [activeImage, setActiveImage] = useState("https://s9.pik.ba/galerija/2022-02/12/05/slika-502636-6207e5f4103fd-velika.jpg");
+    const [activeImage, setActiveImage] = useState("");
+    const [imgs, setImgs] = useState<string[]>([]);
+    const [largeViewOpened, setLargeViewOpened] = useState(false);
 
-    const imgs = [
-        "https://s9.pik.ba/galerija/2022-02/12/05/slika-502636-6207e5f4103fd-velika.jpg",
-        "https://s9.pik.ba/galerija/2021-10/19/05/slika-502636-616ee9ca471b8-velika.jpg",
-        "https://s9.pik.ba/galerija/2021-10/21/03/slika-502636-617171fe4d9e0-velika.jpg",
-        "https://s9.pik.ba/galerija/2021-10/21/03/slika-502636-6171723869260-velika.jpg",
-        "https://s9.pik.ba/galerija/2022-02/12/05/slika-502636-6207e5e55c103-velika.jpg",
-        "https://s9.pik.ba/galerija/2021-09/30/09/slika-502636-6155622040307-velika.jpg",
-        "https://s9.pik.ba/galerija/2021-09/30/09/slika-502636-61556223ad68e-velika.jpg",
-        "https://s9.pik.ba/galerija/2021-09/30/09/slika-502636-6155625118c40-velika.jpg",
-        "https://s9.pik.ba/galerija/2021-09/30/09/slika-502636-615562886eae4-velika.jpg",
-        "https://s9.pik.ba/galerija/2021-09/30/09/slika-502636-6155629a953ce-velika.jpg"
-    ];
+    useLayoutEffect(() => {
+        setImgs(props.images.map((img) => {return img.src64}));
+        setActiveImage(props.images[0].src64);
+    },[]);
 
     function incrementIndex() {
         setActiveImage(imgs[index+2]);
@@ -39,7 +38,7 @@ function Gallery() {
     return (
         <Grid container spacing={2}>
             <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-                <img src={activeImage} style={{width: "100%"}}/>
+                <img src={activeImage} style={{aspectRatio: "16/9", objectFit: "cover"}} onClick={() => setLargeViewOpened(true)}/>
             </Grid>
             <Grid item xl={4} lg={4} md={4} sm={4} xs={4}>
                 <img
@@ -70,6 +69,17 @@ function Gallery() {
                         : null
                 }
             </Grid>
+
+            <Dialog open={largeViewOpened} onClose={() => {setLargeViewOpened(false)}}>
+                <DialogContent>
+                    <img src={activeImage}/>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={decrementIndex}>PROŠLA</Button>
+                    <Button onClick={incrementIndex}>SLJEDEĆA</Button>
+                </DialogActions>
+            </Dialog>
+
         </Grid>
     );
 }

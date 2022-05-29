@@ -16,7 +16,7 @@ interface AdCardProps{
 
 function AdCard(props: AdCardProps) {
     return (
-        <Link to={`/cars?id=${props.carID}`} style={{textDecoration: "none"}}>
+        <Link to={`/app/prodaja/${props.carID}`} style={{textDecoration: "none"}}>
             <Card className={Styles.adCard}>
                 <img src={props.thumbnailURL} className={Styles.adThumbnail}/>
                 <div style={{padding: "1rem"}}>
